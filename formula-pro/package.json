@@ -1,7 +1,7 @@
 {
-    "name": "@jspreadsheet/formula",
-    "title": "The Spreadsheet Formula Parser",
-    "description": "Jspreadsheet formula is a JavaScript software to parse spreadsheet-like formulas.",
+    "name": "@jspreadsheet/formula-pro",
+    "title": "The Spreadsheet Formula Parser PRO",
+    "description": "Jspreadsheet formula pro is a JavaScript software to parse spreadsheet-like formulas.",
     "repository": {
         "type": "git",
         "url": "https://github.com/jspreadsheet/packages.git"
@@ -27,7 +27,7 @@
     ],
     "main": "dist/index.js",
     "version": "1.1.0",
-    "bugs": "https://github.com/jspreadsheet/formula/issues",
-    "homepage": "https://github.com/jspreadsheet/formula",
-    "download": "https://github.com/jspreadsheet/formula/archive/master.zip"
+    "bugs": "https://github.com/jspreadsheet/pro/issues",
+    "homepage": "https://github.com/jspreadsheet/pro",
+    "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
 }
