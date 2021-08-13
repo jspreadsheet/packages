@@ -5692,11 +5692,29 @@
             var s = '';
             var keys = Object.keys(variables);
             if (keys.length) {
+                var parent = {};
                 for (var i = 0; i < keys.length; i++) {
-                    if (keys[i].indexOf('.') == -1 && keys[i].indexOf('!') == -1) {
-                        s += 'var ' + keys[i] + ' = ' + variables[keys[i]] + ';\n';
+                    // Replace ! per dot
+                    t = keys[i].replace(/\!/g, '.');
+                    // Exists parent
+                    if (t.indexOf('.') > 0) {
+                        var t = t.split('.');
+                        parent[t[0]] = {};
+                    }
+                }
+                var t = Object.keys(parent);
+                for (var i = 0; i < t.length; i++) {
+                    s += 'var ' + t[i] + ' = {};';
+                }
+
+                for (var i = 0; i < keys.length; i++) {
+                    // Replace ! per dot
+                    var t = keys[i].replace(/\!/g, '.');
+
+                    if (t.indexOf('.') > 0) {
+                        s += t + ' = ' + variables[keys[i]] + ';\n';
                     } else {
-                        s += keys[i] + ' = ' + variables[keys[i]] + ';\n';
+                        s += 'var ' + t + ' = ' + variables[keys[i]] + ';\n';
                     }
                 }
             }
