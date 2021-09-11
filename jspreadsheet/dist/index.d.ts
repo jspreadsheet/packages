@@ -454,9 +454,13 @@ declare namespace jspreadsheet {
         /** Worksheet state: hidden | null. Hide a worksheet **/
         worksheetState?: 'hidden' | undefined;
         /** Enable the column filters */
-        filters?: Boolean;
+        filters?: boolean;
         /** Footers */
         footers?: Array<any>;
+        /** Apply mask on footers */
+        applyMaskOnFooters?: boolean;
+        /** Define options for the plugins. Each key should be the pluginName. */
+        pluginOptions?: Record<string, any>;
     }
 
     interface spreadsheetInstance {
@@ -663,11 +667,11 @@ declare namespace jspreadsheet {
         /** Get the column data from its number */
         getColumnData?: (col: Number, processed: Boolean) => [];
         /** Set the column data from its number */
-        setColumnData?: (col: Number, data: []) => void;
+        setColumnData?: (col: Number, data: [], force: boolean) => void;
         /** Get the data from one row */
         getRowData?: (row: Number) => [];
         /** Set the data from one row */
-        setRowData?: (row: Number, data: []) => void;
+        setRowData?: (row: Number, data: [], force: boolean) => void;
         /** Get the row id from its position */
         getRowId?: (row: Number) => Number;
         /** Set the row id from its position */
@@ -676,8 +680,8 @@ declare namespace jspreadsheet {
         getPrimaryKey?: () => Number;
         /** Get the next available number in the sequence */
         getNextSequence?: () => Number;
-        /** Get the information of a row by its id */
-        getById?: (row: Number) => Object;
+        /** Get a row data or meta information by Id. */
+        getRowById?: (row: Number, element: boolean) => Object;
         /** Get the defined name or defined names when key is null */
         getDefinedNames?: (key?: string) => object;
         /** Set the defined name */
@@ -736,10 +740,10 @@ declare namespace jspreadsheet {
         setConfig?: (config: Worksheet) => void;
         /** Load the initial worksheet settings */
         loadConfig?: (config: Worksheet) => void;
-        /** Persistence helper method */
-        save?: (url: String, data: Object, token: String) => void;
-        /** Refresh the data */
-        refresh?: () => void;
+        /** Persistence helper method. The callback is executed with a JSON from the server */
+        save?: (url: String, data: Object, token: String, callback: (result: Object) => void) => void;
+        /** Refresh the whole data or from a single row  */
+        refresh?: (y: Number | undefined) => void;
         /** Get the editor type for one column or cell */
         getType?: (x: Number, y: Number) => void;
         /** Set the editor type for one column or cell */
