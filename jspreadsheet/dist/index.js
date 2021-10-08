@@ -1,5 +1,5 @@
 /**
- * Jspreadsheet v8.0.35 (Alpha)
+ * Jspreadsheet v8.0.37 (Alpha)
  *
  * Website: https://jspreadsheet.com
  * Description: Create amazing web based spreadsheets.
@@ -15,7 +15,7 @@ if (! jSuites && typeof(require) === 'function') {
     var jSuites = require('jsuites');
 }
 
-var _$_b78b=["use strict","translate","length","{","}","replace","isArray","toUpperCase","","8.0.35","Base","https://jspreadsheet.com","Unlicensed","Jspreadsheet Pro\r\n","edition"," edition ","version","\r\n","host","license","notification","substr","=","columns","options","name","data","call","undefined","number","path","records","v","editable","config","fullscreen","contains","classList","parent","element","current","add","remove","innerHTML","tbody","refresh","loading","display","style","block",
+var _$_b78b=["use strict","translate","length","{","}","replace","isArray","toUpperCase","","8.0.37","Base","https://jspreadsheet.com","Unlicensed","Jspreadsheet Pro\r\n","edition"," edition ","version","\r\n","host","license","notification","substr","=","columns","options","name","data","call","undefined","number","path","records","v","editable","config","fullscreen","contains","classList","parent","element","current","add","remove","innerHTML","tbody","refresh","loading","display","style","block",
 "string","getCoordsFromColumnName","readonly","jss_hidden_index","table","refreshBorders","status","div","createElement","textAlign","right","fontSize","10px","cursor","pointer","onclick","href","location","/v8","join","sha512","charCodeAt","fromCharCode","atob",",","split","parse","date","hostname","localhost",".","isNumeric","shift","indexOf","domain","scope","v8","getTime","plan"," (Expired)","Licensed to: ","Premium","License required","A valid license is required","This version is not included on the scope of this license",
 "Your license is expired","createTextNode","appendChild","jspreadsheet","getItem","setItem","img","src","/jspreadsheet/","logo.png","none","defineProperty","data-x","getAttribute","data-y","position","scrollLeft","scrollX","offsetWidth","scrollWidth","content","freezeColumns","scrollTop","scrollY","offsetHeight","lastChild","y","rows","scrollHeight","limited","getWidth","width","height","tfoot","firstChild","px","updateX","event","children","thead","setX","updateY","setY","ignore","update","X","target",
 "reset","goto","textContent","build","className","jss_scroll","jss_control","onscroll","visible","type","hidden","defaultRowHeight","results","clientHeight","merged","getBoundingClientRect","left","top","offsetTop","jss_freezed","offsetLeft","renderX","renderY","headers","pagination","tableOverflow","adjustX","adjustY","tableWidth","headerContainer","renderColumn","batch","tableHeight","renderRow","insertBefore","getHeight","create","nestedHeaders","getColumns","renderCell","footers","colgroup","colgroupContainer",

@@ -4,9 +4,19 @@
  * Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
  */
 
-declare function jspreadsheet(element?: HTMLElement, options?: jspreadsheet.Spreadsheet) : Array<jspreadsheet.worksheetInstance>;
+declare function jspreadsheet(element?: HTMLElement, options?: jspreadsheet.Spreadsheet): Array<jspreadsheet.worksheetInstance>;
 
 declare namespace jspreadsheet {
+
+    /** License string */
+    let license: string | null;
+
+    /** Set the license globaly to all spreadsheets and extensions */
+    function setLicense(license: string) : void;
+
+    /** Set extensions to the JSS spreadsheet. Example { formula, parser, render } */
+    function setExtensions(extensions: object) : void;
+
     interface Toolbar {
         /** Array of items for the toolbar */
         items: Array<ToolbarItem>;
@@ -201,7 +211,7 @@ declare namespace jspreadsheet {
         /** Render jspreadsheet spreadsheet on full screen mode. Default: false */
         fullscreen?: boolean;
         /** Make sure the formulas are capital letter. Default: true */
-        secureFormulas: boolean;
+        secureFormulas?: boolean;
         /** Enable formula debug. Default: false **/
         debugFormulas?: boolean,
         /** Execute formulas. Default: true */
@@ -213,7 +223,7 @@ declare namespace jspreadsheet {
         /** Try to cast numbers from cell values when executing formulas. Default: true */
         autoCasting?: boolean;
         /** Remove any HTML from the data and headers. Default: true */
-        stripHTML: boolean;
+        stripHTML?: boolean;
         /** Allow tabs. Default: false */
         tabs?: boolean;
         /** Allow the user to delete worksheets. Default: true **/
