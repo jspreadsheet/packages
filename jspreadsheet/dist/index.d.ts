@@ -88,7 +88,7 @@ declare namespace jspreadsheet {
 
     interface Column {
         /** Define the column type. Can be a string to define a native editor, or a method to define the custom editor plugin. */
-        type?: Function | 'autocomplete' | 'calendar' | 'checkbox' | 'color' | 'dropdown' | 'hidden' | 'html' | 'image' | 'numeric' | 'radio' | 'text';
+        type?: Editor | 'autocomplete' | 'calendar' | 'checkbox' | 'color' | 'dropdown' | 'hidden' | 'html' | 'image' | 'numeric' | 'radio' | 'text';
         /** Column title */
         title?: string;
         /** Name or a path of a property when the data is a JSON object. */
@@ -129,6 +129,8 @@ declare namespace jspreadsheet {
         readOnly?: boolean;
         /** Wrap the text in the column */
         wordWrap?: boolean;
+        /** Process the raw data when copy or download. Default: true */
+        process?: boolean;
     }
 
     interface Row {
@@ -364,11 +366,11 @@ declare namespace jspreadsheet {
         /** The column properties define the behavior of a column and the associated editor */
         columns? : Array<Column>;
         /** Define the properties of a cell. This property overwrite the column definitions */
-        cells: Record<string, Column>;
+        cells?: Record<string, Column>;
         /** Role of this worksheet **/
-        role: string,
+        role?: string,
         /** Nested headers definition */
-        nestedHeaders: Array<Nested>;
+        nestedHeaders?: Array<Nested>;
         /** Default column width. Default: 50px */
         defaultColWidth?: number | string;
         /** Default row height. Default: null */
@@ -461,6 +463,12 @@ declare namespace jspreadsheet {
         applyMaskOnFooters?: boolean;
         /** Define options for the plugins. Each key should be the pluginName. */
         pluginOptions?: Record<string, any>;
+        /** This is a internal controller for the spreadsheet locked properties. Please use editable to make it readonly. */
+        locked?: boolean;
+        /** Allow the selection of unlocked cells. Default: true. */
+        selectUnLockedCells?: boolean;
+        /** Allow the selection of locked cells. Default: true. */
+        selectLockedCells?: boolean;
     }
 
     interface spreadsheetInstance {
@@ -857,8 +865,12 @@ declare namespace jspreadsheet {
         page?: (pageNumber: Number) => void;
         /** Go to the row number **/
         goto?: (rowNumber: Number) => void;
-        /** Search */
+        /** Search for something */
         search?: (str: String) => void;
+        /** Search HTML input */
+        searchInput?: HTMLElement;
+        /** Search HTML container */
+        searchContainer?: HTMLElement;
         /** Reset the search */
         resetSearch?: () => void;
         /** Open the filters */
