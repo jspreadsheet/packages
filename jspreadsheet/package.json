@@ -20,9 +20,9 @@
     ],
     "dependencies": {
         "jsuites": "^4.9.13",
-        "@jspreadsheet/formula": "^1.1.0"
+        "@jspreadsheet/formula": "^1.1.1"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "version": "8.0.37"
+    "version": "8.0.41"
 }

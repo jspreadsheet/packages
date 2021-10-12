@@ -26,7 +26,7 @@
         "data-spreadsheet"
     ],
     "main": "dist/index.js",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "bugs": "https://github.com/jspreadsheet/formula/issues",
     "homepage": "https://github.com/jspreadsheet/formula",
     "download": "https://github.com/jspreadsheet/formula/archive/master.zip"

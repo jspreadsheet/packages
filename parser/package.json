@@ -30,7 +30,8 @@
         "jsuites": "^4.9.13"
     },
     "main": "dist/index.js",
-    "version": "1.3.2",
+    "types": "dist/index.d.ts",
+    "version": "1.4.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

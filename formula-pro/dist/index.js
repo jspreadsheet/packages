@@ -1,5 +1,5 @@
 /**
- * JSS Formula Pro 1.4.1
+ * JSS Formula Pro 1.5.0
  * https://jspreadsheet.com/products/formula
  * @License: this plugin requires a license
  */
