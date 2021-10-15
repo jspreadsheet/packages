@@ -19,9 +19,9 @@
         "data-spreadsheet"
     ],
     "dependencies": {
-        "jsuites": "^4.9.16"
+        "jsuites": "^4.9.17"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "version": "7.12.2"
+    "version": "7.12.3"
 }

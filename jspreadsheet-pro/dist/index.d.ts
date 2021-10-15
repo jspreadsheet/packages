@@ -426,7 +426,7 @@ declare namespace jspreadsheet {
         /** Event: onafterchanges(jspreadsheetHTMLElement, jspreadsheetInstance) */
         onafterchanges?: (element: HTMLElement, records: Array<any>) => void;
         /** When a copy is performed in the spreadsheet. Any string returned will overwrite the user data or return null to progress with the default behavior. */
-        oncopy?: (worksheet: Object, selectedCells: [], data: String) => String;
+        oncopy?: (worksheet: Object, selectedCells: [], data: String) => boolean | string;
         /** Before the paste action is performed. Can return parsed or filtered data, can cancel the action when return false. */
         onbeforepaste?: (worksheet: Object, data: String, x: Number, y: Number) => [];
         /** After a paste action is performed in the spreadsheet. */

@@ -261,7 +261,7 @@ interface Spreadsheet {
     /** Event: onafterchanges(jspreadsheetHTMLElement, jspreadsheetInstance) */
     onafterchanges?: (worksheet: worksheetInstance, records: Array<any>) => void;
     /** When a copy is performed in the spreadsheet. Any string returned will overwrite the user data or return null to progress with the default behavior. */
-    oncopy?: (worksheet: worksheetInstance, selectedCells: [], data: string) => string;
+    oncopy?: (worksheet: worksheetInstance, selectedCells: [], data: string) => boolean | string;
     /** Before the paste action is performed. Can return parsed or filtered data. It is possible to cancel the action when the return is false. */
     onbeforepaste?: (worksheet: worksheetInstance, data: [], x: number, y: number, style: [], processedData: string) => boolean | [];
     /** After a paste action is performed in the spreadsheet. */
