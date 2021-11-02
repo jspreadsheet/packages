@@ -100,6 +100,32 @@ declare namespace jspreadsheet {
         color?: string;
     }
 
+    interface ContextmenuItem {
+        /** Context menu item type: line | divisor | default */
+        type?: 'line' | 'divisor' | 'default';
+        /** Context menu item title */
+        title: string;
+        /** Context menu icon key. (Material icon key icon identification) */
+        icon?: string;
+        /** HTML id property of the item DOM element */
+        id?: string;
+        /** Item is disabled */
+        disabled?: boolean;
+        /** Onclick event for the contextmenu item */
+        onclick?: (instance: object, e: MouseEvent) => void;
+        /** A short description or instruction for the item. Normally a shortcut. Ex. CTRL + C */
+        shortcut?: string;
+        /** Show this text when the user mouse over the element */
+        tooltip?: string;
+        /** Subm menu */
+        submenu?: Array<ContextmenuItem>;
+    }
+
+    interface Contextmenu {
+        /** The contextmenu menu */
+        (worksheet: worksheetInstance, x: number, y: number, e: MouseEvent, items: Array<ContextmenuItem>, section: string, section_argument1?: any, section_argument2?: any) : Array<ContextmenuItem> | boolean;
+    }
+
     interface Calendar {
         /** Render type. Default: 'default' */
         type?: 'default' | 'year-month-picker';
@@ -194,9 +220,9 @@ declare namespace jspreadsheet {
         /** When the spreadsheet needs to save something in the server. */
         persistence?: (method: String, args: Object) => void;
         /** When the user opens the context menu. */
-        contextMenu?: (instance: Object, x: Number, y: Number, e: MouseEvent, items: [], section: String, a: any, b?: any) => void;
+        contextMenu?: (instance: Object, x: Number, y: Number, e: MouseEvent, items:Array<ContextmenuItem> , section: String, a: any, b?: any) => void;
         /** When the toolbar is create and clicked. */
-        toolbar?: (instance: Object, items: []) => void;
+        toolbar?: (instance: Object, toolbar: Toolbar) => void;
     }
 
     interface Nested {
@@ -270,7 +296,7 @@ declare namespace jspreadsheet {
         /** Before any data is sent to the backend. Can be used to overwrite the data or to cancel the action when return false. */
         onbeforesave?: (spreadsheet: spreadsheetInstance, worksheet: worksheetInstance, data: object) => boolean | object;
         /** After something is saved */
-        onsave?: (spreadsheet: spreadsheetInstance, worksheet: worksheetInstance, data: []) => void;
+        onsave?: (spreadsheet: spreadsheetInstance, worksheet: worksheetInstance, data: Array<any>) => void;
         /** Before a column value is changed. NOTE: It is possible to overwrite the original value, by return a new value on this method. */
         onbeforechange?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number, value: any) => boolean | any;
         /** After a column value is changed. */
@@ -278,9 +304,9 @@ declare namespace jspreadsheet {
         /** Event: onafterchanges(jspreadsheetHTMLElement, jspreadsheetInstance) */
         onafterchanges?: (worksheet: worksheetInstance, records: Array<any>) => void;
         /** When a copy is performed in the spreadsheet. Any string returned will overwrite the user data or return null to progress with the default behavior. */
-        oncopy?: (worksheet: worksheetInstance, selectedCells: [], data: string) => boolean | string;
+        oncopy?: (worksheet: worksheetInstance, selectedCells: Array<number>, data: string) => boolean | string;
         /** Before the paste action is performed. Can return parsed or filtered data. It is possible to cancel the action when the return is false. */
-        onbeforepaste?: (worksheet: worksheetInstance, data: [], x: number, y: number, style: [], processedData: string) => boolean | [];
+        onbeforepaste?: (worksheet: worksheetInstance, data: Array<any>, x: number, y: number, style: [], processedData: string) => boolean | [];
         /** After a paste action is performed in the spreadsheet. */
         onpaste?: (worksheet: worksheetInstance, records: Array<any>) => void;
         /** Before a new row is inserted. You can cancel the insert event by returning false. */
@@ -377,11 +403,11 @@ declare namespace jspreadsheet {
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
-        contextMenu?: (worksheet: worksheetInstance, x: number, y: number, e: Event, section: string, section_argument1?: any, section_argument2?: any) => [] | boolean;
+        contextMenu?: Contextmenu;
         /** The first row is the header titles when parsing a HTML table */
-        parseTableFirstRowAsHeader?: boolean,
+        parseTableFirstRowAsHeader?: boolean;
         /** Try to identify a column type when parsing a HTML table */
-        parseTableAutoCellType?: boolean,
+        parseTableAutoCellType?: boolean;
         /** Global cell wrapping. Default: false */
         wordWrap?: boolean;
         /** About information */
@@ -468,7 +494,7 @@ declare namespace jspreadsheet {
         /** Corner selection and corner data cloning. Default: true */
         selectionCopy?: boolean;
         /** Merged cells. Default: null */
-        mergeCells?: Record<string, []>;
+        mergeCells?: Record<string, any[]>;
         /** Allow search on the spreadsheet */
         search?: boolean;
         /** Activate pagination and defines the number of records per page. Default: false */
@@ -597,7 +623,7 @@ declare namespace jspreadsheet {
 
     interface worksheetInstance {
         /** Array with the borders information */
-        borders: [];
+        borders: Array<any>;
         /** Close the editon for one cell */
         closeEditor: (cell: HTMLElement, save: boolean) => void;
         /** Close the filters */
@@ -660,13 +686,13 @@ declare namespace jspreadsheet {
         /** Get the cell element from the cellname */
         getCell: (cellName: string) => Object;
         /** Get the cell element from its coordinates */
-        getCellFromCoords: (x: number, y: number) => [];
+        getCellFromCoords: (x: number, y: number) => Array<any>;
         /** Get attributes from one cell when applicable */
         getCells: (cellName: string) => Column;
         /** Get the column object by its position */
         getColumn: (position: number) => Object;
         /** Get the column data from its number */
-        getColumnData: (col: number, processed?: boolean) => [];
+        getColumnData: (col: number, processed?: boolean) => Array<any>;
         /** Get the column position by its name */
         getColumnIdByName: (name: string) => number;
         /** Get the settings for one column. Row its optional when need to get the information from one specific cell. */
@@ -682,7 +708,7 @@ declare namespace jspreadsheet {
          * @param {boolean} get the raw or processed data
          * @return {array} array of data
          */
-        getData: (highlighted?: boolean, processed?: boolean, delimiter?: string) => [];
+        getData: (highlighted?: boolean, processed?: boolean, delimiter?: string) => Array<any>;
         /** Get the defined name or defined names when key is null */
         getDefinedNames: (key?: string) => object;
         /** Internal method: Get the editor for one cell */
@@ -696,17 +722,17 @@ declare namespace jspreadsheet {
         /** Get the header title */
         getHeader: (columnnumber: number) => string;
         /** Get all header elements */
-        getHeaders: (asArray: boolean) => [];
+        getHeaders: (asArray: boolean) => Array<any>;
         /** Get the height of one row by its position */
         getHeight: (row: number) => void;
         /** Get the highlighted coordinates **/
-        getHighlighted: () => [];
+        getHighlighted: () => Array<any>;
         /** Get json */
-        getJson: (h?: boolean, processed?: boolean) => [];
+        getJson: (h?: boolean, processed?: boolean) => any;
         /** Get the processed data cell shown to the user by the cell name */
         getLabel: (cellName: string) => Object;
         /** Get the processed data cell shown to the user by its coordinates */
-        getLabelFromCoords: (x: number, y: number) => [];
+        getLabelFromCoords: (x: number, y: number) => string[];
         /** Get the merged cells. Cellname: A1, A2, etc */
         getMerge: (cellName: string) => void;
         /** Get one or all meta information for one cell. */
@@ -714,7 +740,7 @@ declare namespace jspreadsheet {
         /** Get the nested cells */
         getNestedCell: (x: number, y: number, properties?: any) => Object;
         /** Get the nested header columns */
-        getNestedColumns: (x: number, y: number) => [];
+        getNestedColumns: (x: number, y: number) => any[];
         /** Get the nested headers */
         getNestedHeaders: () => [];
         /** Get the next available number in the sequence */
@@ -730,11 +756,11 @@ declare namespace jspreadsheet {
         /** Get a row data or meta information by Id. */
         getRowById: (row: number, element: boolean) => Object;
         /** Get the data from one row */
-        getRowData: (row: number, processed: boolean) => [];
+        getRowData: (row: number, processed: boolean) => any[];
         /** Get the row id from its position */
         getRowId: (row: number) => number;
         /** Get all selected cells */
-        getSelected: (columnNameOnly: boolean) => [];
+        getSelected: (columnNameOnly: boolean) => any[];
         /** Get the selected columns */
         getSelectedColumns: () => [];
         /** Get the selected rows */
@@ -768,7 +794,7 @@ declare namespace jspreadsheet {
         /** Add a new column */
         insertColumn: (numOfColumns: number, columnnumber: number, insertBefore: boolean, properties: Column, data: []) => void;
         /** Add a new row */
-        insertRow: (numOfRows: number, rownumber: number, insertBefore: boolean, data: []) => void;
+        insertRow: (numOfRows: number, rownumber: number, insertBefore: boolean, data: any[]) => void;
         /** Check if cell is attached to the DOM */
         isAttached: (x: number, y: number) => boolean;
         /** The worksheet is editable */
@@ -856,7 +882,7 @@ declare namespace jspreadsheet {
         /** Select All */
         selectAll: () => void;
         /** Selected cells */
-        selectedCell: [];
+        selectedCell: any[];
         /** Internal record id sequence */
         sequence: number;
         /** Set borders with a border name and color. */
@@ -864,17 +890,17 @@ declare namespace jspreadsheet {
         /** Set attributes for one cell */
         setCells: (cellName: string, settings: Column) => void;
         /** Set the column data from its number */
-        setColumnData: (col: number, data: [], force?: boolean) => void;
+        setColumnData: (col: number, data: any[], force?: boolean) => void;
         /** Set the comments for one cell */
         setComments: (cellName: String, comments: String) => void;
         /** Change the worksheet settings */
         setConfig: (config: Worksheet) => void;
         /** Reset the table data */
-        setData: (data: []) => void;
+        setData: (data: any[]) => void;
         /** Set the defined name */
         setDefinedNames: (key: string, value: string) => void;
         /** Set filter */
-        setFilter: (colnumber: number, keywords: []) => void;
+        setFilter: (colnumber: number, keywords: any[]) => void;
         /** Set the footers */
         setFooter: (data: []) => void;
         /** Set the footer value */
@@ -890,15 +916,15 @@ declare namespace jspreadsheet {
         /** Get one or various meta information for one cell. */
         setMeta: (cell: string | object, property?: string, value?: string) => void;
         /** Set the nested headers */
-        setNestedHeaders: (config: []) => void;
+        setNestedHeaders: (config: any[]) => void;
         /** Set plugins for the spreadsheet */
-        setPlugins: (plugins: []) => void;
+        setPlugins: (plugins: any[]) => void;
         /** Set the properties for one column */
         setProperties: (column: number, settings: Object) => void;
         /** Set or reset the cell as readonly */
         setReadOnly: (cell: Object, state: boolean) => void;
         /** Set the data from one row */
-        setRowData: (row: number, data: [], force: boolean) => void;
+        setRowData: (row: number, data: any[], force: boolean) => void;
         /** Set the row id from its position */
         setRowId: (row: number, newId: number) => void;
         /** Set the style for one cell. Ex. setStyle('A1', 'background-color', 'red') */
@@ -945,7 +971,7 @@ declare namespace jspreadsheet {
         /** DOM Worksheet table tfoot */
         tfoot: HTMLElement;
         /** Verify if one col + row is merged and return or not the merge cell */
-        isMerged: (x: number, y: number, getParent: boolean) => boolean | [];
+        isMerged: (x: number, y: number, getParent: boolean) => boolean | any[];
         /** Verify if the col has any merged cells */
         isColMerged: (x: number) => boolean;
         /** Verify if the col has any merged cells */
