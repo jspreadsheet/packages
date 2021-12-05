@@ -214,6 +214,8 @@ declare namespace jspreadsheet {
 
     interface Plugin {
         /** When a new worksheet is added. */
+        beforeinit?: (worksheet: Object) => void;
+        /** When a new worksheet is added. */
         init?: (worksheet: Object) => void;
         /** It would receive a call for every spreadsheet event. */
         onevent?: (event: String, a?: any, b?: any, c?: any, d?: any) => void;
@@ -247,10 +249,8 @@ declare namespace jspreadsheet {
         sorting?: (direction: boolean, column: number) => number;
         /** Remote URL for the persistence server **/
         server?: string;
-
         /** Toolbar */
-        toolbar?: boolean | Toolbar;
-
+        toolbar?: boolean | Toolbar | Function;
         /**  Allow table edition */
         editable?: boolean;
         /** Allow data export */
@@ -355,13 +355,10 @@ declare namespace jspreadsheet {
         onchangefooter?: (worksheet: worksheetInstance, newValue: string, oldValue: string) => void;
         /** When the value in a cell footer is changed. */
         onchangefootervalue?: (worksheet: worksheetInstance, x: number, y: number, value: String) => void;
-
         /** On change nested headers */
         onchangenested?: (worksheet: worksheetInstance, options: object) => void;
-
         /** On change nested cell properties */
         onchangenestedcell?: (worksheet: worksheetInstance, x: number, y: number, properties: object) => void;
-
         /** When an editor is created. */
         oncreateeditor?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number, element: HTMLElement, options: object) => void;
         /** When the editor is opened. **/
@@ -440,7 +437,7 @@ declare namespace jspreadsheet {
         /** Role of this worksheet **/
         role?: string,
         /** Nested headers definition */
-        nestedHeaders?: Array<Nested>;
+        nestedHeaders?: Array<Array<Nested>> | Array<Nested>;
         /** Default column width. Default: 50px */
         defaultColWidth?: number | string;
         /** Default row height. Default: null */
@@ -501,7 +498,6 @@ declare namespace jspreadsheet {
         pagination?: number;
         /** Dropdown for the user to change the number of records per page. Example: [10,25,50,100]. Default: false */
         paginationOptions?: boolean | Array<number>;
-
         /** Text Overflow. Default: false */
         textOverflow?: boolean;
         /** Table overflow. Default: false */
@@ -753,6 +749,8 @@ declare namespace jspreadsheet {
         getProcessed: (x: number, y: number, extended: boolean) => void;
         /** Get the properties for one column or cell */
         getProperties: (x: number, y: number) => void;
+        /** Get the selection in a range format */
+        getRange: () => string;
         /** Get a row data or meta information by Id. */
         getRowById: (row: number, element: boolean) => Object;
         /** Get the data from one row */
@@ -807,6 +805,8 @@ declare namespace jspreadsheet {
         last: () => void;
         /** Navigation left */
         left: () => void;
+        /** Dynamic load data to the spreadsheet. This method does not trigger events or persistence and reset the spreadsheet. To persist use setData. */
+        loadData: (data: any[]) => void;
         /** Change a column position */
         moveColumn: (from: number, to: number) => void;
         /** Change a row position */
@@ -895,7 +895,7 @@ declare namespace jspreadsheet {
         setComments: (cellName: String, comments: String) => void;
         /** Change the worksheet settings */
         setConfig: (config: Worksheet) => void;
-        /** Reset the table data */
+        /** Set the worksheet data */
         setData: (data: any[]) => void;
         /** Set the defined name */
         setDefinedNames: (key: string, value: string) => void;
