@@ -165,7 +165,7 @@ declare namespace jspreadsheet {
         /** Load the items from the dropdown from a remote URL. */
         url?: string;
         /** Define the items in the dropdown and autocomplete column type. */
-        source?: Array<DropdownItem>;
+        source?: Array<DropdownItem> | Array<string> | Array<number>;
         /** Define the dropdown or autocomplete to accept multiple options. */
         multiple?: boolean;
         /** Define the input mask for the data cell. @see https://jsuites.net/v4/javascript-mask */
@@ -425,7 +425,7 @@ declare namespace jspreadsheet {
         /** Allow internal sequence for new rows */
         sequence?: boolean;
         /** Load the data into a new spreadsheet from an array of rows or objects */
-        data?: Array<any>;
+        data?: Array<Array<any>> | Array<Record<string, any>>;
         /** Deprected. Please use the data property. */
         json?: Array<Record<string, any>>;
         /** Array with the rows properties definitions such as title, height. */
@@ -680,7 +680,7 @@ declare namespace jspreadsheet {
         /** Get the border */
         getBorder: (alias: string) => object;
         /** Get the cell element from the cellname */
-        getCell: (cellName: string) => Object;
+        getCell: (cellName: string) => HTMLElement | null;
         /** Get the cell element from its coordinates */
         getCellFromCoords: (x: number, y: number) => Array<any>;
         /** Get attributes from one cell when applicable */
@@ -696,7 +696,7 @@ declare namespace jspreadsheet {
         /** Get the comments from one cell. Example: getComments('A1') */
         getComments: (cellName?: string) => string;
         /** Get the worksheet settings */
-        getConfig: () => boolean;
+        getConfig: () => Worksheet;
         /**
          * Get the worksheet data
          *
