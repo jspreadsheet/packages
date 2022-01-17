@@ -8,11 +8,11 @@
 
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-        typeof define === 'function' && define.amd ? define(factory) :
-            global.formula = factory();
+    typeof define === 'function' && define.amd ? define(factory) :
+    global.formula = factory();
 }(this, (function () {
 
-    return (function() {
+    var Formula = (function(scope) {
         // Based on sutoiku work (https://github.com/sutoiku)
         var error = (function() {
             var exports = {};
@@ -3494,7 +3494,7 @@
             exports.INFO = null;
 
             exports.ISBLANK = function(value) {
-                return value === null;
+                return value === null || value === undefined || value === '';
             };
 
             exports.ISBINARY = function (number) {
@@ -5589,21 +5589,21 @@
             var keys = Object.keys(methods);
             for (var j = 0; j < keys.length; j++) {
                 if (! methods[keys[j]]) {
-                    window[keys[j]] = function() {
+                    scope[keys[j]] = function() {
                         return keys[j] + 'Not implemented';
                     }
                 } else if (typeof(methods[keys[j]]) == 'function' || typeof(methods[keys[j]]) == 'object') {
-                    window[keys[j]] = methods[keys[j]];
-                    window[keys[j]].toString = function() { return '#ERROR' };
+                    scope[keys[j]] = methods[keys[j]];
+                    scope[keys[j]].toString = function() { return '#ERROR' };
 
                     if (typeof(methods[keys[j]]) == 'object') {
                         var tmp = Object.keys(methods[keys[j]]);
                         for (var z = 0; z < tmp.length; z++) {
-                            window[keys[j]][tmp[z]].toString = function() { return '#ERROR' };
+                            scope[keys[j]][tmp[z]].toString = function() { return '#ERROR' };
                         }
                     }
                 } else {
-                    window[keys[j]] = function() {
+                    scope[keys[j]] = function() {
                         return keys[j] + 'Not implemented';
                     }
                 }
@@ -5617,22 +5617,22 @@
         var y = null;
         var instance = null;
 
-        window['TABLE'] = function() {
+        scope['TABLE'] = function() {
             return instance;
         }
-        window['COLUMN'] = window['COL'] = function () {
+        scope['COLUMN'] = scope['COL'] = function () {
             return parseInt(x) + 1;
         }
-        window['ROW'] =  function() {
+        scope['ROW'] =  function() {
             return parseInt(y) + 1;
         }
-        window['CELL'] =  function() {
+        scope['CELL'] =  function() {
             return F.getColumnNameFromCoords(x, y);
         }
-        window['VALUE'] = function(col, row, processed) {
+        scope['VALUE'] = function(col, row, processed) {
             return instance.getValueFromCoords(parseInt(col) - 1, parseInt(row) - 1, processed);
         }
-        window['THISROWCELL'] = function(col) {
+        scope['THISROWCELL'] = function(col) {
             return instance.getValueFromCoords(parseInt(col) - 1, parseInt(y));
         }
 
@@ -5683,6 +5683,10 @@
             return e;
         }
 
+        var isNumeric = (function (num) {
+            return !isNaN(num) && num !== null && num !== '';
+        });
+
         var F = function(expression, variables, i, j, obj) {
             // Global helpers
             instance = obj;
@@ -5711,6 +5715,14 @@
                     // Replace ! per dot
                     var t = keys[i].replace(/\!/g, '.');
 
+                    // Update range
+                    if (! isNumeric(variables[keys[i]])) {
+                        var tokens = variables[keys[i]].match(/(('.*?'!)|(\w*!))?(\$?[A-Z]+\$?[0-9]*):(\$?[A-Z]+\$?[0-9]*)?/g);
+                        if (tokens && tokens.length) {
+                            variables[keys[i]] = tokensUpdate(tokens, variables[keys[i]]);
+                        }
+                    }
+
                     if (t.indexOf('.') > 0) {
                         s += t + ' = ' + variables[keys[i]] + ';\n';
                     } else {
@@ -5725,7 +5737,7 @@
             // Adapt to JS
             expression = secureFormula(expression, true);
             // Update range
-            var tokens = expression.match(/([A-Z]+[0-9]*\.)?(\$?[A-Z]+\$?[0-9]+):(\$?[A-Z]+\$?[0-9]+)?/g);
+            var tokens = expression.match(/(('.*?'!)|(\w*!))?(\$?[A-Z]+\$?[0-9]*):(\$?[A-Z]+\$?[0-9]*)?/g);
             if (tokens && tokens.length) {
                 expression = tokensUpdate(tokens, expression);
             }
@@ -5899,12 +5911,18 @@
             var k = Object.keys(o);
             for (var i = 0; i < k.length; i++) {
                 if (typeof(o[k[i]]) == 'function') {
-                    window[k[i]] = o[k[i]];
+                    scope[k[i]] = o[k[i]];
                 }
             }
         }
 
         return F;
-    })();
+    });
+
+    if (typeof(window) !== 'undefined') {
+        return Formula(window);
+    } else {
+        return null;
+    }
 
 })));
