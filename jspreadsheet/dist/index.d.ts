@@ -190,6 +190,8 @@ declare namespace jspreadsheet {
         wordWrap?: boolean;
         /** Process the raw data when copy or download. Default: true */
         process?: boolean;
+        /** Try to cast numbers from a cell text. Default: true */
+        autoCasting?: boolean;
     }
 
     interface Row {
