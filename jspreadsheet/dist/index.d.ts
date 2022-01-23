@@ -224,7 +224,7 @@ declare namespace jspreadsheet {
         /** When the spreadsheet needs to save something in the server. */
         persistence?: (method: String, args: Object) => void;
         /** When the user opens the context menu. */
-        contextMenu?: (instance: Object, x: Number, y: Number, e: MouseEvent, items:Array<ContextmenuItem> , section: String, a: any, b?: any) => void;
+        contextMenu?: (instance: Object, x: number, y: number, e: MouseEvent, items:Array<ContextmenuItem> , section: String, a: any, b?: any) => void;
         /** When the toolbar is create and clicked. */
         toolbar?: (instance: Object, toolbar: Toolbar) => void;
     }
@@ -397,8 +397,18 @@ declare namespace jspreadsheet {
         onbeforefilter?: (worksheet: worksheetInstance, filters: [], data: []) => void;
         /** After the filter has been applied to the rows. */
         onfilter?: (worksheet: worksheetInstance, filters: [], data: []) => void;
-        /** When a new cell is created **/
+        /** When a new cell is created */
         oncreatecell?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number, value: any) => void;
+        /** When a new row is created */
+        oncreaterow?: (worksheet: worksheetInstance, j: number, HTMLElement: tr) => void;
+        /**
+         * Before execute a formula.
+         * @param {string} expression - formula to be executed.
+         * @param {number} coordinate x - cell coordinates
+         * @param {number} coordinate y
+         * @return {any} Return false to cancel parsing. Return new parsed formula. Return void to continue with original formula
+         */
+        onbeforeformula?: (worksheet: worksheetInstance, expression: string, x: number, y: number) => string | false | void;
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
@@ -459,7 +469,7 @@ declare namespace jspreadsheet {
         /** Consider first line as header. Default: true */
         csvHeaders?: boolean;
         /** Delimiter to consider when dealing with the CSV data. Default: ',' */
-        csvDelimiter?: boolean;
+        csvDelimiter?: string;
         /** Allow column sorting */
         columnSorting?: boolean;
         /** Allow column dragging */
@@ -568,7 +578,7 @@ declare namespace jspreadsheet {
         /** Get the worksheet by its id */
         getWorksheet: (id: String) => Number;
         /** Get the active worksheet when applicable */
-        getWorksheetActive: () => worksheetInstance;
+        getWorksheetActive: () => number;
         /** Get the worksheet instance by its position */
         getWorksheetInstance: (position: Number) => worksheetInstance;
         /** HTMLElement Helper */
