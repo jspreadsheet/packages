@@ -454,7 +454,7 @@ declare namespace jspreadsheet {
         defaultColWidth?: number | string;
         /** Default row height. Default: null */
         defaultRowHeight?: number | string;
-        /** Default alignment for a new column: [center, left, right] */
+        /** Deprecated. The default alignment of a cell is defined by a CSS class from 8.2.0+ */
         defaultColAlign?: 'center' | 'left' | 'right' | 'justify';
         /** Minimum number of spare rows. Default: 0 */
         minSpareRows?: number;
@@ -556,7 +556,7 @@ declare namespace jspreadsheet {
         /** Contextmenu HTMLElement */
         contextmenu: HTMLElement;
         /** Create a new worksheet from the given settings */
-        createWorksheet: (options: Worksheet) => void;
+        createWorksheet: (options: Worksheet) => worksheetInstance;
         /** Delete an existing worksheet by its position */
         deleteWorksheet: (position: Number) => void;
         /** DOM Element */
@@ -647,7 +647,7 @@ declare namespace jspreadsheet {
         /** DOM Corner square */
         corner: HTMLElement;
         /** Create a new worksheet */
-        createWorksheet: (worksheetOptions: Worksheet) => void;
+        createWorksheet: (worksheetOptions: Worksheet) => worksheetInstance;
         /** Internal selected cell */
         cursor: object;
         /** Cut */
@@ -714,9 +714,11 @@ declare namespace jspreadsheet {
          *
          * @param {boolean} only the selected cells
          * @param {boolean} get the raw or processed data
-         * @return {array} array of data
+         * @param {string} delimiter to get the data as a string with columns separate by the char delimiter.
+         * @param {boolean} get the data as a JSON object.
+         * @return {array|object} array or object with the data
          */
-        getData: (highlighted?: boolean, processed?: boolean, delimiter?: string) => Array<any>;
+        getData: (highlighted?: boolean, processed?: boolean, delimiter?: string, asJson?: boolean) => Array<any> | String;
         /** Get the defined name or defined names when key is null */
         getDefinedNames: (key?: string) => object;
         /** Internal method: Get the editor for one cell */

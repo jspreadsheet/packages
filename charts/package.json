@@ -1,7 +1,7 @@
 {
-    "name": "@jspreadsheet/render",
-    "title": "Export files to XLSX Excel from a JSS Spreadsheet",
-    "description": "Export JSS online spreadsheets to XLSX files. This is a premium extension and requires a license.",
+    "name": "@jspreadsheet/forms",
+    "title": "JSS to HTML form",
+    "description": "Jspreadsheet forms  is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
     "repository": {
         "type": "git",
         "url": "https://github.com/jspreadsheet/packages.git"
@@ -23,14 +23,17 @@
         "grid-editor",
         "data-table",
         "data-grid",
-        "data-spreadsheet"
+        "data-spreadsheet",
+        "chartjs",
+        "charts"
     ],
     "dependencies": {
-        "jszip": "^3.7.1",
-        "jsuites": "^4.9.19"
+        "jsuites": "^4.9.1",
+        "lemonadejs": "^2.2.5",
+        "chart.js": "^3.7.0"
     },
     "main": "dist/index.js",
-    "version": "1.3.1",
+    "version": "1.0.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
