@@ -168,6 +168,8 @@ declare namespace jspreadsheet {
         source?: Array<DropdownItem> | Array<string> | Array<number>;
         /** Define the dropdown or autocomplete to accept multiple options. */
         multiple?: boolean;
+        /** Define the dropdown separator for multiple dropdown options. Default ; */
+        delimiter?: string;
         /** Define the input mask for the data cell. @see https://jsuites.net/v4/javascript-mask */
         mask?: string;
         /** Decimal representation character. */
@@ -186,12 +188,14 @@ declare namespace jspreadsheet {
         options?: Calendar | Dropdown;
         /** The column is read-only */
         readOnly?: boolean;
-        /** Wrap the text in the column */
-        wordWrap?: boolean;
         /** Process the raw data when copy or download. Default: true */
         process?: boolean;
         /** Try to cast numbers from a cell text. Default: true */
         autoCasting?: boolean;
+        /** Shift formula when copy and pasting. This option is only valid for custom column type. Default: false */
+        shiftFormula?: boolean;
+        /** Wrap the text in the column */
+        wrap?: boolean;
     }
 
     interface Row {
@@ -345,7 +349,7 @@ declare namespace jspreadsheet {
         onbeforesort?: (worksheet: worksheetInstance, column: number, direction: number, newOrderValues: []) => boolean | [] | void;
         /** When a column is sorted. */
         onsort?: (worksheet: worksheetInstance, column: number, direction: number, newOrderValues: []) => void;
-        /** When the spreadsheed gets the focus. */
+        /** When the spreadsheet gets the focus. */
         onfocus?: (worksheet: worksheetInstance) => void;
         /** When the spreadsheet loses the focus. */
         onblur?: (worksheet: worksheetInstance) => void;
@@ -400,7 +404,7 @@ declare namespace jspreadsheet {
         /** When a new cell is created */
         oncreatecell?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number, value: any) => void;
         /** When a new row is created */
-        oncreaterow?: (worksheet: worksheetInstance, j: number, HTMLElement: tr) => void;
+        oncreaterow?: (worksheet: worksheetInstance, j: number, tr: HTMLElement) => void;
         /**
          * Before execute a formula.
          * @param {string} expression - formula to be executed.
@@ -409,6 +413,8 @@ declare namespace jspreadsheet {
          * @return {any} Return false to cancel parsing. Return new parsed formula. Return void to continue with original formula
          */
         onbeforeformula?: (worksheet: worksheetInstance, expression: string, x: number, y: number) => string | false | void;
+        /** Get the information about the expressions executed from the formula chain */
+        onformulachain?: (worksheet: worksheetInstance, expressions: Array<objects>) => void;
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
@@ -565,7 +571,7 @@ declare namespace jspreadsheet {
         element: HTMLElement;
         /** DOM Element container for the filters */
         filters: HTMLElement;
-        /** Toggle the fullscreen mode */
+        /** Toggle the full screen mode */
         fullscreen: (state: Boolean) => void;
         /** Get the toolbar object definitions */
         getToolbar: Toolbar,
@@ -703,8 +709,8 @@ declare namespace jspreadsheet {
         getColumnData: (col: number, processed?: boolean) => Array<any>;
         /** Get the column position by its name */
         getColumnIdByName: (name: string) => number;
-        /** Get the settings for one column. Row its optional when need to get the information from one specific cell. */
-        getColumnOptions: (x: number, y: number) => void;
+        /** Alias for getProperty */
+        getColumnOptions: (x: number, y?: number) => Column;
         /** Get the comments from one cell. Example: getComments('A1') */
         getComments: (cellName?: string) => string;
         /** Get the worksheet settings */
@@ -730,11 +736,11 @@ declare namespace jspreadsheet {
         /** Get the footer value */
         getFooterValue: (x: number, y: number) => any;
         /** Get the header title */
-        getHeader: (columnnumber: number) => string;
+        getHeader: (columnNumber: number) => string;
         /** Get all header elements */
         getHeaders: (asArray: boolean) => Array<any>;
-        /** Get the height of one row by its position */
-        getHeight: (row: number) => void;
+        /** Get the height of one row by its position when height is defined. */
+        getHeight: (row?: number) => Array<number> | number;
         /** Get the highlighted coordinates **/
         getHighlighted: () => Array<any>;
         /** Get json */
@@ -743,8 +749,8 @@ declare namespace jspreadsheet {
         getLabel: (cellName: string) => Object;
         /** Get the processed data cell shown to the user by its coordinates */
         getLabelFromCoords: (x: number, y: number) => string[];
-        /** Get the merged cells. Cellname: A1, A2, etc */
-        getMerge: (cellName: string) => void;
+        /** Get the merged cells. Cell name: A1, A2, etc */
+        getMerge: (cellName: string) => Object | Array<number>;
         /** Get one or all meta information for one cell. */
         getMeta: (cellName: string, property: string) => Object;
         /** Get the nested cells */
@@ -755,14 +761,14 @@ declare namespace jspreadsheet {
         getNestedHeaders: () => [];
         /** Get the next available number in the sequence */
         getNextSequence: () => number;
-        /** Get the column or cell options by coordinates */
-        getOptions: (x: number, y: number) => object;
+        /** Alias to getProperty */
+        getOptions: (x: number, y?: number) => Column;
         /** Get the primaryKey column when applicable. */
         getPrimaryKey: () => number;
-        /** Get processed data by the coordinates of the cell */
-        getProcessed: (x: number, y: number, extended: boolean) => void;
-        /** Get the properties for one column or cell */
-        getProperties: (x: number, y: number) => void;
+        /** Get processed data by the coordinates of the cell. Extended process a color, progressbar and rating as raw. */
+        getProcessed: (x: number, y: number, extended?: boolean) => any;
+        /** Get the properties for one column when only x is present or the cell when x and y is defined. */
+        getProperties: (x: number, y?: number) => Column;
         /** Get the selection in a range format */
         getRange: () => string;
         /** Get a row data or meta information by Id. */
@@ -773,20 +779,18 @@ declare namespace jspreadsheet {
         getRowId: (row: number) => number;
         /** Get all selected cells */
         getSelected: (columnNameOnly: boolean) => any[];
-        /** Get the selected columns */
-        getSelectedColumns: () => [];
-        /** Get the selected rows */
-        getSelectedRows: () => [];
+        /** Get the selected columns. DOMElements or Indexes */
+        getSelectedColumns: (indexes?: Boolean) => Array<HTMLElement> | Array<number>;
+        /** Get the selected rows. DOMElements or Indexes */
+        getSelectedRows: (indexes?: Boolean) => Array<HTMLElement> | Array<number>;
         /** Get the style from one cell. Ex. getStyle('A1') */
         getStyle: (cell: string) => Object;
-        /** Get value by the cellname or object. The value can be the raw or processed value. */
+        /** Get value by the cell name or object. The value can be the raw or processed value. */
         getValue: (cell: string, processed: boolean) => String;
         /** Get value by the coordinates. The value can be the raw or processed value. */
-        getValueFromCoords: (x: number, y: number, processed: boolean) => void;
-        /** Get the width of one column by its position */
-        getWidth: (x: number) => void;
-        /** Get the editor type for one column or cell */
-        getType: (x: number, y: number) => void;
+        getValueFromCoords: (x: number, y: number, processed: boolean) => any;
+        /** Get the width of one column by index or all column width as an array when index is null. */
+        getWidth: (x?: number) => Array<number> | number;
         /** Go to the row number, [col number] **/
         goto: (y: number, x?: number) => void;
         /** Hold the header container */
@@ -839,7 +843,7 @@ declare namespace jspreadsheet {
         page: (pagenumber: number) => void;
         /** Current page number */
         pagenumber: number;
-        /** Pagination DOM containr */
+        /** Pagination DOM container */
         pagination: Object;
         /** Spreadsheet object */
         parent: spreadsheetInstance;
@@ -855,7 +859,7 @@ declare namespace jspreadsheet {
         refreshBorders: (border?: string) => void;
         /** Refresh footers */
         refreshFooter: () => void;
-        /** Remove the merged cells by the cellname */
+        /** Remove the merged cells by the cell name */
         removeMerge: (cellName: String) => void;
         /** Reset the borders by name border name */
         resetBorders: (border: String, resetPosition: boolean) => void;

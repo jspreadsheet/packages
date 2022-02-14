@@ -1,5 +1,5 @@
 {
-    "name": "@jspreadsheet/forms",
+    "name": "@jspreadsheet/charts",
     "title": "JSS to HTML form",
     "description": "Jspreadsheet forms  is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
     "repository": {
@@ -28,12 +28,12 @@
         "charts"
     ],
     "dependencies": {
-        "jsuites": "^4.9.1",
+        "jsuites": "^4.10.1",
         "lemonadejs": "^2.2.5",
         "chart.js": "^3.7.0"
     },
     "main": "dist/index.js",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
