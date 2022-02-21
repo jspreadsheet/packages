@@ -415,6 +415,8 @@ declare namespace jspreadsheet {
         onbeforeformula?: (worksheet: worksheetInstance, expression: string, x: number, y: number) => string | false | void;
         /** Get the information about the expressions executed from the formula chain */
         onformulachain?: (worksheet: worksheetInstance, expressions: Array<objects>) => void;
+        /** Customize the items available when filter editor is open. */
+        onopenfilter?: (worksheet: worksheetInstance, column: number, options: Array<objects>) => void | Array<objects>;
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */

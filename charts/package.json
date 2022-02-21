@@ -33,7 +33,7 @@
         "chart.js": "^3.7.0"
     },
     "main": "dist/index.js",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
