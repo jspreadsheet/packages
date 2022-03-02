@@ -433,6 +433,8 @@ declare namespace jspreadsheet {
         license?: string,
         /** Worksheets */
         worksheets?: Array<Worksheet>;
+        /** Validations */
+        validations?: any;
     }
 
     interface Worksheet {
