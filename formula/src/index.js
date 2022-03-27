@@ -4069,9 +4069,11 @@
                 if (number instanceof Error) {
                     return number;
                 }
+                if (number === 0) {
+                  return error.num;
+                }
                 return Math.log(number) / Math.log(10);
             };
-
             exports.MDETERM = null;
 
             exports.MINVERSE = null;
@@ -5716,7 +5718,7 @@
                     var t = keys[i].replace(/\!/g, '.');
 
                     // Update range
-                    if (! isNumeric(variables[keys[i]])) {
+                    if (variables[keys[i]] !== null && ! isNumeric(variables[keys[i]])) {
                         var tokens = variables[keys[i]].match(/(('.*?'!)|(\w*!))?(\$?[A-Z]+\$?[0-9]*):(\$?[A-Z]+\$?[0-9]*)?/g);
                         if (tokens && tokens.length) {
                             variables[keys[i]] = tokensUpdate(tokens, variables[keys[i]]);
@@ -5743,7 +5745,12 @@
             }
 
             // Calculate
-            return new Function(s + '; return ' + expression)();
+            var result = new Function(s + '; return ' + expression)();
+            if (result === null) {
+                result = 0;
+            }
+
+            return result;
         }
 
         /**
