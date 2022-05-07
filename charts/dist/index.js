@@ -14,7 +14,7 @@ if (!lemonade && typeof(require) === 'function') {
 }
 
 if (!Chart && typeof(require) === 'function') {
-    var Chart = require('chart.js');
+    var Chart = require('chart.js/dist/Chart.min.js');
 }
 
 (function(l,g){"object"===typeof exports&&"undefined"!==typeof module?module.exports=g():"function"===typeof define&&define.amd?define(g):l.charts=g()})(this,function(){var l=null,g=jSuites.translate,r=function(a){var d=a.innerText.match(/get\(.*?\)/gi);return d&&d.length?d[0].substring(4,d[0].length-1):a.innerText},A=function(){var a=[];"string"===typeof this.value&&(this.value=[this.value]);for(var d=0;12>d;d++)a[d]={value:this.value[d]||""};this.data=a;return lemonade.element('<div class="jss_chart_palette">\n                <Color @loop="self.data" />\n            </div>',

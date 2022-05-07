@@ -28,9 +28,9 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "dependencies": {
-        "jsuites": "^4.9.37"
+        "jsuites": "^4.11.0"
     },
-    "version": "1.5.3",
+    "version": "1.6.2",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
