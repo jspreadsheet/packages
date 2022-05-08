@@ -1,3 +1,18 @@
+/**
+ * Advanced CSV importer for JSS
+ * https://jspreadsheet.com/products/csv-importer
+ *
+ * @License: this plugin requires a license
+ */
+
+if (!jSuites && typeof(require) === 'function') {
+    var jSuites = require('jsuites');
+}
+
+if (!lemonade && typeof(require) === 'function') {
+    var lemonade = require('lemonadejs');
+}
+
 var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.ASSUME_ES5=!1;$jscomp.ASSUME_NO_NATIVE_MAP=!1;$jscomp.ASSUME_NO_NATIVE_SET=!1;$jscomp.SIMPLE_FROUND_POLYFILL=!1;$jscomp.ISOLATE_POLYFILLS=!1;$jscomp.FORCE_POLYFILL_PROMISE=!1;$jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION=!1;$jscomp.defineProperty=$jscomp.ASSUME_ES5||"function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,d){if(b==Array.prototype||b==Object.prototype)return b;b[c]=d.value;return b};
 $jscomp.getGlobal=function(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var d=b[c];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");};$jscomp.global=$jscomp.getGlobal(this);$jscomp.IS_SYMBOL_NATIVE="function"===typeof Symbol&&"symbol"===typeof Symbol("x");$jscomp.TRUST_ES6_POLYFILLS=!$jscomp.ISOLATE_POLYFILLS||$jscomp.IS_SYMBOL_NATIVE;$jscomp.polyfills={};
 $jscomp.propertyToPolyfillSymbol={};$jscomp.POLYFILL_PREFIX="$jscp$";var $jscomp$lookupPolyfilledValue=function(b,c){var d=$jscomp.propertyToPolyfillSymbol[c];if(null==d)return b[c];d=b[d];return void 0!==d?d:b[c]};$jscomp.polyfill=function(b,c,d,e){c&&($jscomp.ISOLATE_POLYFILLS?$jscomp.polyfillIsolated(b,c,d,e):$jscomp.polyfillUnisolated(b,c,d,e))};
