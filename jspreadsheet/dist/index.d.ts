@@ -1,6 +1,7 @@
 /**
- * Official Type definitions for Jspreadsheet Pro v9
- * https://jspreadsheet.com/v9
+ * Official Type definitions for Jspreadsheet Pro v8
+ * https://jspreadsheet.com
+ * Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
  */
 
 declare function jspreadsheet(element: HTMLElement, options: jspreadsheet.Spreadsheet) : Array<jspreadsheet.worksheetInstance>;
@@ -426,10 +427,6 @@ declare namespace jspreadsheet {
         onformulachain?: (worksheet: worksheetInstance, expressions: Array<object>) => void;
         /** Customize the items available when filter editor is open. */
         onopenfilter?: (worksheet: worksheetInstance, column: number, options: Array<object>) => void | Array<object>;
-        /** When the viewport dimension is updated. */
-        onresize?: (worksheet: worksheetInstance, w: number, h: number) => void
-        /** When the references are changed. Sorting, Add/Delete/Move Rows and Columns. */
-        onchangereferences?: (worksheet: worksheetInstance, affectedTokens: [], deletedTokens: []) => void
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
@@ -571,8 +568,6 @@ declare namespace jspreadsheet {
         selectUnLockedCells?: boolean;
         /** Allow the selection of locked cells. Default: true. */
         selectLockedCells?: boolean;
-        /** Enable resizable worksheet in on or both direction (horizontal | vertical | both). Default: none */
-        resize?: 'horizontal' | 'vertical' | 'both' | 'none' | undefined;
     }
 
     interface spreadsheetInstance {

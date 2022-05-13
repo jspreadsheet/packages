@@ -260,8 +260,8 @@ declare namespace jspreadsheet {
         sorting?: (direction: boolean, column: number) => number;
         /** Remote URL for the persistence server **/
         server?: string;
-        /** Toolbar */
-        toolbar?: boolean | Toolbar | Function;
+        /** Enable the toolbars */
+        toolbar?: boolean | 'extended' | Toolbar | Function;
         /**  Allow table edition */
         editable?: boolean;
         /** Allow data export */
@@ -430,6 +430,8 @@ declare namespace jspreadsheet {
         onresize?: (worksheet: worksheetInstance, w: number, h: number) => void
         /** When the references are changed. Sorting, Add/Delete/Move Rows and Columns. */
         onchangereferences?: (worksheet: worksheetInstance, affectedTokens: [], deletedTokens: []) => void
+        /** Intercept the ajax call before save. XHR ajax object */
+        onbeforesend?: (worksheet: worksheetInstance, xhr: object) => void
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
