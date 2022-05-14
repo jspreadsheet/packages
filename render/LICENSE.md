@@ -1,4 +1,5 @@
-# Formula Plugin
+# JSS Extensions
+
 
 This software requires a license.
 
