@@ -28,12 +28,12 @@
         "charts"
     ],
     "dependencies": {
-        "jsuites": "^4.10.1",
+        "jsuites": "^4.12.1",
         "lemonadejs": "^2.2.5",
         "chart.js": "^3.7.0"
     },
     "main": "dist/index.js",
-    "version": "1.0.7",
+    "version": "2.0.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
