@@ -28,7 +28,9 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "dependencies": {
-        "jsuites": "^4.11.0"
+        "bessel": "^1.0.2",
+        "jstat": "^1.9.4",
+        "jsuites": "^4.12.1"
     },
     "version": "1.6.2",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
