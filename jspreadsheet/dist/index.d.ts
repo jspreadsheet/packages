@@ -427,6 +427,8 @@ declare namespace jspreadsheet {
         onformulachain?: (worksheet: worksheetInstance, expressions: Array<object>) => void;
         /** Customize the items available when filter editor is open. */
         onopenfilter?: (worksheet: worksheetInstance, column: number, options: Array<object>) => void | Array<object>;
+        /** Intercept the ajax call before save. XHR ajax object */
+        onbeforesend?: (worksheet: worksheetInstance, xhr: object) => void
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
