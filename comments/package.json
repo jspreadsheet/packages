@@ -1,7 +1,7 @@
 {
-    "name": "@jspreadsheet/charts",
-    "title": "JSS to HTML form",
-    "description": "Jspreadsheet forms  is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
+    "name": "@jspreadsheet/comments",
+    "title": "JSS Advance comments",
+    "description": "Jspreadsheet is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
     "repository": {
         "type": "git",
         "url": "https://github.com/jspreadsheet/packages.git"
@@ -24,16 +24,14 @@
         "data-table",
         "data-grid",
         "data-spreadsheet",
-        "chartjs",
-        "charts"
+        "advance comments"
     ],
     "dependencies": {
         "jsuites": "^4.12.1",
-        "lemonadejs": "^2.2.5",
-        "chart.js": "^3.7.0"
+        "lemonadejs": "^2.6.0"
     },
     "main": "dist/index.js",
-    "version": "2.0.1",
+    "version": "1.0.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
