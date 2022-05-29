@@ -30,7 +30,7 @@
         "jsuites": "^4.12.0"
     },
     "main": "dist/index.js",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

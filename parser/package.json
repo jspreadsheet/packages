@@ -31,7 +31,7 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

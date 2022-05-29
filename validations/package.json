@@ -1,7 +1,7 @@
 {
-    "name": "@jspreadsheet/forms",
-    "title": "JSS to HTML form",
-    "description": "Jspreadsheet forms  is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
+    "name": "@jspreadsheet/validations",
+    "title": "Create validations on your online spreadsheets.",
+    "description": "Create validations on your online spreadsheets. This is a premium extension and requires a license.",
     "repository": {
         "type": "git",
         "url": "https://github.com/jspreadsheet/packages.git"
@@ -23,13 +23,15 @@
         "grid-editor",
         "data-table",
         "data-grid",
-        "data-spreadsheet"
+        "data-spreadsheet",
+        "validations"
     ],
     "dependencies": {
-        "jsuites": "^4.12.1"
+        "jszip": "^3.7.1",
+        "jsuites": "^4.12.3"
     },
     "main": "dist/index.js",
-    "version": "1.2.2",
+    "version": "1.0.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

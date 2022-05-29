@@ -61,7 +61,7 @@ declare namespace jspreadsheet {
         onclick?: Function;
         /** For the type select when a new item is selected */
         onchange?: Function;
-        /** To update the state of this item **/
+        /** To update the state of this item */
         updateState?: Function;
     }
 
@@ -254,11 +254,11 @@ declare namespace jspreadsheet {
         cloud?: string;
         /** DOM element for binding the javascript events. This property is normally used when JSS is running as a web component. */
         root?: HTMLElement;
-        /** Global defined names. It defines global range variables. **/
+        /** Global defined names. It defines global range variables. */
         definedNames?: Record<string, string>,
-        /** Global sorting handler. **/
+        /** Global sorting handler. */
         sorting?: (direction: boolean, column: number) => number;
-        /** Remote URL for the persistence server **/
+        /** Remote URL for the persistence server */
         server?: string;
         /** Enable the toolbars */
         toolbar?: boolean | 'extended' | Toolbar | Function;
@@ -276,11 +276,11 @@ declare namespace jspreadsheet {
         fullscreen?: boolean;
         /** Make sure the formulas are capital letter. Default: true */
         secureFormulas?: boolean;
-        /** Enable formula debug. Default: false **/
+        /** Enable formula debug. Default: false */
         debugFormulas?: boolean,
         /** Execute formulas. Default: true */
         parseFormulas?: boolean;
-        /** Disable the formula editor. Default: true **/
+        /** Disable the formula editor. Default: true */
         editorFormulas?: boolean;
         /** Auto increment cell data when using the corner copy, including formulas, numbers and dates. Default: true */
         autoIncrement?: boolean;
@@ -300,7 +300,7 @@ declare namespace jspreadsheet {
         moveDownOnEnter?: boolean;
         /** This method is called when the data in the spreadsheet is ready. */
         onload?: (spreadsheet: spreadsheetInstance) => void;
-        /** Spreadsheet is clicked **/
+        /** Spreadsheet is clicked */
         onclick?: (worksheet: worksheetInstance, section: string, x: number, y: number) => void;
         /** When undo is applied */
         onundo?: (worksheet: worksheetInstance, historyRecord: object) => void;
@@ -374,9 +374,9 @@ declare namespace jspreadsheet {
         onchangenestedcell?: (worksheet: worksheetInstance, x: number, y: number, properties: object) => void;
         /** When an editor is created. */
         oncreateeditor?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number, element: HTMLElement, options: object) => void;
-        /** When the editor is opened. **/
+        /** When the editor is opened. */
         oneditionstart?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number) => void;
-        /** When the editor is closed. **/
+        /** When the editor is closed. */
         oneditionend?: (worksheet: worksheetInstance, cell: HTMLElement, x: number, y: number, newValue: any, save: boolean) => void;
         /** When the style of a cell is changed. */
         onchangestyle?: (worksheet: worksheetInstance, newValue: object, oldValue: object) => void;
@@ -453,17 +453,17 @@ declare namespace jspreadsheet {
     }
 
     interface Worksheet {
-        /** Logo URL **/
+        /** Logo URL */
         logo?: string
         /** Load the data from an external server URL */
         url?: string;
-        /** Persitence URL or true when the URL is the same of the URL of the data source */
+        /** Persistence URL or true when the URL is the same of the URL of the data source */
         persistence?: string | boolean;
         /** Allow internal sequence for new rows */
         sequence?: boolean;
         /** Load the data into a new spreadsheet from an array of rows or objects */
         data?: Array<Array<any>> | Array<Record<string, any>>;
-        /** Deprected. Please use the data property. */
+        /** Deprecated. Please use the data property. */
         json?: Array<Record<string, any>>;
         /** Array with the rows properties definitions such as title, height. */
         rows?: Row[];
@@ -471,7 +471,7 @@ declare namespace jspreadsheet {
         columns?: Array<Column>;
         /** Define the properties of a cell. This property overwrite the column definitions */
         cells?: Record<string, Column>;
-        /** Role of this worksheet **/
+        /** Role of this worksheet */
         role?: string,
         /** Nested headers definition */
         nestedHeaders?: Array<Array<Nested>> | Array<Nested>;
@@ -553,11 +553,11 @@ declare namespace jspreadsheet {
         freezeColumns?: number;
         /** Initial sorting [colNumber, direction]. Default: null */
         orderBy?: [number, boolean];
-        /** Worksheet Unique Id. **/
+        /** Worksheet Unique Id. */
         worksheetId?: string;
-        /** Worksheet Name. **/
+        /** Worksheet Name. */
         worksheetName?: string;
-        /** Worksheet state: hidden | null. Hide a worksheet **/
+        /** Worksheet state: hidden | null. Hide a worksheet */
         worksheetState?: 'hidden' | undefined;
         /** Enable the column filters */
         filters?: boolean;
@@ -620,9 +620,9 @@ declare namespace jspreadsheet {
         ignoreHistory: Boolean;
         /** Ignore persistence events */
         ignorePersistence: Boolean;
-        /** HTMLElement editor container **/
+        /** HTMLElement editor container */
         input: HTMLElement;
-        /** HTMLElement loading element **/
+        /** HTMLElement loading element */
         loading: HTMLElement;
         /** Rename an existing worksheet by its position */
         renameWorksheet: (position: Number, title: String) => void;
@@ -706,8 +706,8 @@ declare namespace jspreadsheet {
         edition: [];
         /** DOM Worksheet. Alias for worksheet */
         element: HTMLElement;
-        /** Internal method: Execute a formula */
-        executeFormula: (expression: string, x?: number, y?: number, caching?: boolean) => void;
+        /** Internal method: Execute a formula. */
+        executeFormula: (expression: string, x?: number, y?: number, caching?: boolean, basic?: boolean) => void;
         /** Navigation first */
         first: (shiftKey?: boolean, ctrlKey?: boolean) => void;
         /** Footers */
@@ -762,7 +762,7 @@ declare namespace jspreadsheet {
         getHeaders: (asArray: boolean) => Array<any>;
         /** Get the height of one row by its position when height is defined. */
         getHeight: (row?: number) => Array<number> | number;
-        /** Get the highlighted coordinates **/
+        /** Get the highlighted coordinates */
         getHighlighted: () => Array<any>;
         /** Get json */
         getJson: (h?: boolean, processed?: boolean) => any;
@@ -812,7 +812,7 @@ declare namespace jspreadsheet {
         getValueFromCoords: (x: number, y: number, processed: boolean) => any;
         /** Get the width of one column by index or all column width as an array when index is null. */
         getWidth: (x?: number) => Array<number> | number;
-        /** Go to the row number, [col number] **/
+        /** Go to the row number, [col number] */
         goto: (y: number, x?: number) => void;
         /** Hold the header container */
         headerContainer: HTMLElement;
@@ -869,7 +869,7 @@ declare namespace jspreadsheet {
         /** Spreadsheet object */
         parent: spreadsheetInstance;
         /** Paste */
-        paste: (x: number, y: number, data: string) => void;
+        paste: (x: number, y: number, data: string | any[]) => void;
         /** Get the quantity of pages when pagination is active */
         quantityOfPages?: () => number;
         /** Array with the cell DOM elements */
