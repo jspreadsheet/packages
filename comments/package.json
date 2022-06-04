@@ -27,11 +27,11 @@
         "advance comments"
     ],
     "dependencies": {
-        "jsuites": "^4.12.1",
+        "jsuites": "^4.12.11",
         "lemonadejs": "^2.6.0"
     },
     "main": "dist/index.js",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

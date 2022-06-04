@@ -432,6 +432,10 @@ declare namespace jspreadsheet {
         onchangereferences?: (worksheet: worksheetInstance, affectedTokens: [], deletedTokens: []) => void
         /** Intercept the ajax call before save. XHR ajax object */
         onbeforesend?: (worksheet: worksheetInstance, xhr: object) => void
+        /** When defined names is affected */
+        onchangedefinednames?: (worksheet: object, data: []) => void
+        /** New char is entered on editor. */
+        oninput?: (worksheet: object, event: object) => void
         /** Run every single table update action. Can bring performance issues if perform too much changes. */
         updateTable?: (worksheet: worksheetInstance, cell: Object, x: number, y: number, value: String) => void;
         /** Return false to cancel the contextMenu event, or return custom elements for the contextmenu. */
@@ -946,8 +950,8 @@ declare namespace jspreadsheet {
         setFooterValue: (col: number, row: number, value: any) => void;
         /** Freeze x number of columns */
         setFreezeColumns: (num: number) => void;
-        /** Set the header title */
-        setHeader: (x: number, title: String) => void;
+        /** Set the header title. Empty or null to reset to the default header value. */
+        setHeader: (x: number, title?: String) => void;
         /** Set the height of one row by its position */
         setHeight: (row: number, width: number) => void;
         /** Get the merged cells. Cellname: A1, A2, etc */

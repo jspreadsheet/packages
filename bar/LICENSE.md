@@ -3,7 +3,7 @@
 This software requires a license.
 
 More information:
-https://jspreasheet.com/products/validations
+https://jspreasheet.com/products/bar
 
 The javascript spreadsheet:
 https://jspreasheet.com/

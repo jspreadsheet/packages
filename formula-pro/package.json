@@ -30,7 +30,7 @@
     "dependencies": {
         "jsuites": "^4.12.5"
     },
-    "version": "2.1.0",
+    "version": "2.1.3",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

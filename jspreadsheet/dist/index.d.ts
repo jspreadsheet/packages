@@ -941,8 +941,8 @@ declare namespace jspreadsheet {
         setFooterValue: (col: number, row: number, value: any) => void;
         /** Freeze x number of columns */
         setFreezeColumns: (num: number) => void;
-        /** Set the header title */
-        setHeader: (x: number, title: String) => void;
+        /** Set the header title. Empty to reset to the default header value. */
+        setHeader: (x: number, title?: String) => void;
         /** Set the height of one row by its position */
         setHeight: (row: number, width: number) => void;
         /** Get the merged cells. Cellname: A1, A2, etc */

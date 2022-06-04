@@ -1,6 +1,6 @@
 {
-    "name": "@jspreadsheet/cloud",
-    "title": "JSS Cloud helpers",
+    "name": "@jspreadsheet/bar",
+    "title": "Spreadsheet edition bar and defined names management.",
     "description": "Jspreadsheet is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
     "repository": {
         "type": "git",
@@ -23,13 +23,16 @@
         "grid-editor",
         "data-table",
         "data-grid",
-        "data-spreadsheet"
+        "data-spreadsheet",
+        "bar"
     ],
     "dependencies": {
-        "jsuites": "^4.12.11"
+        "jsuites": "^4.12.11",
+        "lemonadejs": "^2.6.2",
+        "chart.js": "^3.7.0"
     },
     "main": "dist/index.js",
-    "version": "2.0.0",
+    "version": "1.0.1",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
