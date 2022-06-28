@@ -1,9 +1,9 @@
-# Formula Plugin
+# JSS Server
 
 This software requires a license.
 
 More information:
-https://jspreasheet.com/v8/formulas
+https://jspreasheet.com/products/server
 
 The javascript spreadsheet:
 https://jspreasheet.com/

@@ -28,10 +28,10 @@
     ],
     "dependencies": {
         "jszip": "^3.7.1",
-        "jsuites": "^4.12.10"
+        "jsuites": "^4.13.7"
     },
     "main": "dist/index.js",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

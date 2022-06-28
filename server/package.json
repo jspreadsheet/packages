@@ -1,7 +1,7 @@
 {
-    "name": "@jspreadsheet/render",
-    "title": "Export files to XLSX Excel from a JSS Spreadsheet",
-    "description": "Export JSS online spreadsheets to XLSX files. This is a premium extension and requires a license.",
+    "name": "@jspreadsheet/server",
+    "title": "JSS Server",
+    "description": "Create a backend for data persistence and real-time collaboration. This software requires a special license.",
     "repository": {
         "type": "git",
         "url": "https://github.com/jspreadsheet/packages.git"
@@ -23,14 +23,23 @@
         "grid-editor",
         "data-table",
         "data-grid",
-        "data-spreadsheet"
+        "data-spreadsheet",
+        "server"
     ],
     "dependencies": {
-        "jszip": "^3.7.1",
-        "jsuites": "^4.14.0"
+        "aws-sdk": "^2.1000.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "js-sha512": "^0.8.0",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.4",
+        "pg": "^8.7.1",
+        "socket.io": "^4.2.0",
+        "uuid": "^8.3.2"
     },
     "main": "dist/index.js",
-    "version": "1.7.2",
+    "version": "1.1.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

@@ -23,6 +23,9 @@ declare namespace jspreadsheet {
     /** Set extensions to the JSS spreadsheet. Example { formula, parser, render } */
     function setExtensions(extensions: object) : void
 
+    /** Destroy the spreadsheet. Full destroy will clear all JSS controllers and it is not possible to re-create a new spreadsheet if true is used, until refresh the page. */
+    function destroy(element: HTMLElement, fullDestroy?: boolean) : void;
+
     /** License string */
     let license: string;
 

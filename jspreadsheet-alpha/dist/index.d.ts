@@ -20,7 +20,10 @@ declare namespace jspreadsheet {
     function forms(options: any) : void;
 
     /** Set extensions to the JSS spreadsheet. Example { formula, parser, render } */
-    function setExtensions(extensions: object) : void
+    function setExtensions(extensions: object) : void;
+
+    /** Destroy the spreadsheet. Full destroy will clear all JSS controllers and it is not possible to re-create a new spreadsheet if true is used, until refresh the page. */
+    function destroy(element: HTMLElement, fullDestroy?: boolean) : void;
 
     /** License string */
     let license: string;
@@ -146,7 +149,7 @@ declare namespace jspreadsheet {
 
     interface Column {
         /** Define the column type. Can be a string to define a native editor, or a method to define the custom editor plugin. */
-        type?: Editor | 'autocomplete' | 'calendar' | 'checkbox' | 'color' | 'dropdown' | 'hidden' | 'html' | 'image' | 'numeric' | 'radio' | 'text';
+        type?: Editor | 'autocomplete' | 'calendar' | 'checkbox' | 'color' | 'dropdown' | 'hidden' | 'html' | 'image' | 'numeric' | 'radio' | 'text' | 'notes';
         /** Column title */
         title?: string;
         /** Name or a path of a property when the data is a JSON object. */
@@ -197,6 +200,10 @@ declare namespace jspreadsheet {
         shiftFormula?: boolean;
         /** Wrap the text in the column */
         wrap?: boolean;
+        /** Rotate text value between -90 and 90. Default: null */
+        rotate?: number;
+        /** CSS odd even background color. Default: false */
+        zebra?: boolean;
     }
 
     interface Row {
@@ -245,6 +252,8 @@ declare namespace jspreadsheet {
         tooltip?: string;
         /** Nested header colspan */
         colspan?: number;
+        /** Alignment */
+        align?: 'left' | 'center' | 'right';
     }
 
     interface Spreadsheet {
@@ -428,6 +437,8 @@ declare namespace jspreadsheet {
         onopenfilter?: (worksheet: worksheetInstance, column: number, options: Array<object>) => void | Array<object>;
         /** When the viewport dimension is updated. */
         onresize?: (worksheet: worksheetInstance, w: number, h: number) => void
+        /** Before the references are changed. */
+        onbeforechangereferences?: (worksheet: worksheetInstance, affectedTokens: [], deletedTokens: []) => void
         /** When the references are changed. Sorting, Add/Delete/Move Rows and Columns. */
         onchangereferences?: (worksheet: worksheetInstance, affectedTokens: [], deletedTokens: []) => void
         /** Intercept the ajax call before save. XHR ajax object */
@@ -555,6 +566,12 @@ declare namespace jspreadsheet {
         style?: Record<string, string>;
         /** Freeze columns. Default: 0 */
         freezeColumns?: number;
+        /** Freeze rows. Default: 0 */
+        freezeRows?: number;
+        /** Enable freeze column manual control. Default: false */
+        freezeColumnControl: boolean,
+        /** Enable freeze row manual control. Default: false */
+        freezeRowControl: boolean,
         /** Initial sorting [colNumber, direction]. Default: null */
         orderBy?: [number, boolean];
         /** Worksheet Unique Id. */
@@ -908,6 +925,8 @@ declare namespace jspreadsheet {
         results: Array<number>;
         /** Navigation right */
         right: () => void;
+        /** Rotate the spreadsheet cell text. cell = A1, B1... etc */
+        rotate: (cell: string|string[], value:number) => void;
         /** DOM array of rows */
         rows: Array<HTMLElement>;
         /** Persistence helper method. The callback is executed with a JSON from the server */

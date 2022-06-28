@@ -27,12 +27,11 @@
         "bar"
     ],
     "dependencies": {
-        "jsuites": "^4.12.11",
-        "lemonadejs": "^2.6.2",
-        "chart.js": "^3.7.0"
+        "jsuites": "^4.14.0",
+        "lemonadejs": "^2.6.2"
     },
     "main": "dist/index.js",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"
