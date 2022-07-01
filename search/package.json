@@ -1,7 +1,7 @@
 {
-    "name": "@jspreadsheet/cloud",
-    "title": "JSS Cloud helpers",
-    "description": "Jspreadsheet is a JavaScript software to create a HTML form based on a JSS spreadsheet.",
+    "name": "@jspreadsheet/search",
+    "title": "Search and replace tool.",
+    "description": "Modal for search and replace.",
     "repository": {
         "type": "git",
         "url": "https://github.com/jspreadsheet/packages.git"
@@ -23,13 +23,16 @@
         "grid-editor",
         "data-table",
         "data-grid",
-        "data-spreadsheet"
+        "data-spreadsheet",
+        "search",
+        "search and replace"
     ],
     "dependencies": {
+        "jszip": "^3.7.1",
         "jsuites": "^4.14.1"
     },
     "main": "dist/index.js",
-    "version": "2.1.1",
+    "version": "1.0.0",
     "bugs": "https://github.com/jspreadsheet/pro/issues",
     "homepage": "https://github.com/jspreadsheet/pro",
     "download": "https://github.com/jspreadsheet/pro/archive/master.zip"

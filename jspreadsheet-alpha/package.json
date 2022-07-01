@@ -19,10 +19,10 @@
         "data-spreadsheet"
     ],
     "dependencies": {
-        "jsuites": "^4.14.1",
+        "jsuites": "^4.14.2",
         "@jspreadsheet/formula": "^1.3.0"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "version": "9.0.27"
+    "version": "9.0.28"
 }
