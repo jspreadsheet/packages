@@ -17,15 +17,15 @@ if (!Chart && typeof(require) === 'function') {
     var Chart = require('chart.js/dist/chart.min.js');
 }
 
-var _$_5b0f='translate;;status;scope;charts;indexOf;This plugin is not included on the scope of this license;License required;match;innerText;length;substring;You need to specify, where the chart would be inserted.;getCell;readonly;contains;classList;You can\'t insert chart in cell ;chart;offsetTop;offsetLeft;line;none;palette;push;datasets;data;getCoordsFromColumnName;helpers;setProperty;value;string;create;parent;backgroundColor;onchange;color;element;instance;Data to analyze;Contains labels;Series based on columns or rows datasets;Column datasets;Row datasets;Choose the cell where the new chart will be inserted;Insert;Cancel;createDropdown;dropdown;createModal;modal;Insert chart;400px;480px;createPicker;lastChild;focus;picker;createWhere;cellName;cancel;close;insert;!;split;toUpperCase;:;getTokensFromRange;getRangeFromTokens;getValue;1;get(;getColumnNameFromCoords;);haveLabels;shift;type;floating;set;toggle;active;panel;open;tracking;add;remove;createColorPicker;borderColor;name;inputPointStyle;200px;Circle;circle;Star;star;Triangle;triangle;Point;point;data-name;getAttribute;inputPalette;map;paletteList;keys;setValue;Serie settings;Background color;Border color;Point style;Fill;Serie data range;Data;Serie label;Label;Serie add;Serie delete;createData;createLabel;label;pie;doughnut;get;#FFFFFF;refresh;delete;splice;series;Configuration;Styling;Chart type;Orientation;Data labels;Series;Title;Legend;X Axis Visibility;X Axis Title;Y Axis Visibility;Y Axis Title;Y Begin at Zero;Begin at Zero;Save;Chart settings;500px;600px;createLabels;labels;createTabs;modern;tabs;inputType;Line chart;Bar chart;bar;Pie chart;Doughnut chart;Radar chart;radar;children;root;all;display;style;rootstyle;inputIndexAxis;Horizontally;x;Vertically;y;inputLegend;Top;top;Left;left;Right;right;Bottom;bottom;Disable;blur;isOpen;container;chartOptions;resetSelection;stringify;parse;[data-path];querySelectorAll;tabsElement;data-path;call;path;data-value;checkbox;true;@bind;checked;val;function;update;save;.jss_chart;parentNode;zIndex;destroyCell;jss_chart_cell;records;updateProperty;px;width;height;createCell;div;createElement;jss_chart;jss_object;jpanel;tabindex;setAttribute;300px;ondblclick;data-x;data-y;dblclick;editable;options;settings;plugins;contextmenu;current;flip_to_front;Flip to front;flip_to_back;Flip to back;divisor;Delete chart;assign;appendChild;content;=CHARTS(;executeFormula;updateCell;openEditor;closeEditor;[CHARTS];getProperty;,;join;canvas;"get((.*?))";gi;$1;replace;=;data.labels;max;from;i;material-icons;minimize;onclick;jss_chart_error;data-error;removeAttribute;Something went wrong;error;position;absolute;0px;margin;40px;toolbar;addchart;getRange;items;onevent;onbeforepaste;substr;=CHARTS;ondeleterow;ondeletecolumn;onchangereferences;cells;toLowerCase;updateFormula;ignoreHistory;onchangeproperty;forEach;contextMenu;getData;input;isNumeric;append;tools;render;oninit;setPlugins;editors;setFormula;formula;license;object;undefined;exports;amd'.split(";");
-(function(p,h){typeof exports===_$_5b0f[302]&&typeof module!==_$_5b0f[303]?module[_$_5b0f[304]]=h():typeof define===_$_5b0f[199]&&define[_$_5b0f[305]]?define(h):p[_$_5b0f[4]]=h()})(this,function(){var p=null,h=jSuites[_$_5b0f[0]],A=function(){var a=_$_5b0f[1];8==this[_$_5b0f[2]]?this[_$_5b0f[3]]&&-1!=this[_$_5b0f[3]][_$_5b0f[5]](_$_5b0f[4])||(a=_$_5b0f[6]):a=_$_5b0f[7];return a},v=function(a){var f=a[_$_5b0f[9]][_$_5b0f[8]](/get\(.*?\)/gi);return f&&f[_$_5b0f[10]]?f[0][_$_5b0f[11]](4,f[0][_$_5b0f[10]]-
-1):a[_$_5b0f[9]]},B=function(){var a=[];typeof this[_$_5b0f[30]]===_$_5b0f[31]&&(this[_$_5b0f[30]]=[this[_$_5b0f[30]]]);for(var f=0;12>f;f++)a[f]={value:this[_$_5b0f[30]][f]||_$_5b0f[1]};this[_$_5b0f[26]]=a;return lemonade[_$_5b0f[37]]('<div class="jss_chart_palette">\n                <Color @loop="self.data" />\n            </div>',this,{Color:function(){var g=this;g[_$_5b0f[32]]=function(d){jSuites[_$_5b0f[36]](d,{value:g[_$_5b0f[30]],onchange:function(b,e){b=g[_$_5b0f[33]][_$_5b0f[26]][_$_5b0f[5]](g);
-g[_$_5b0f[33]][_$_5b0f[30]][b]=e;g[_$_5b0f[33]][_$_5b0f[35]](_$_5b0f[34],g[_$_5b0f[33]][_$_5b0f[30]]);g[_$_5b0f[30]]=e}})};return lemonade[_$_5b0f[37]]('<div style="{{\'background-color:\'+self.value}}" @ready="self.create(this)"></div>',g)}})},C=function(){var a=this,f=null;a[_$_5b0f[38]]=null;var g=`
+var _$_cdb1=';charts;This plugin is not included on the scope of this license;License required;You need to specify, where the chart would be inserted.;readonly;You can\'t insert chart in cell ;chart;line;none;string;backgroundColor;Data to analyze;Contains labels;Series based on columns or rows datasets;Column datasets;Row datasets;Choose the cell where the new chart will be inserted;Insert;Cancel;Insert chart;400px;480px;!;:;1;get(;);floating;set;active;200px;Circle;circle;Star;star;Triangle;triangle;Point;point;data-name;Serie settings;Background color;Border color;Point style;Fill;Serie data range;Data;Serie label;Label;Serie add;Serie delete;pie;doughnut;get;#FFFFFF;data;delete;Configuration;Styling;Chart type;Orientation;Data labels;Series;Title;Legend;X Axis Visibility;X Axis Title;Y Axis Visibility;Y Axis Title;Y Begin at Zero;Begin at Zero;Save;Chart settings;500px;600px;modern;Line chart;Bar chart;bar;Pie chart;Doughnut chart;Radar chart;radar;all;Horizontally;x;Vertically;y;Top;top;Left;left;Right;right;Bottom;bottom;Disable;[data-path];data-path;data-value;checkbox;true;@bind;function;.jss_chart;jss_chart_cell;div;jss_chart;jss_object;jpanel;tabindex;300px;data-x;data-y;flip_to_front;Flip to front;flip_to_back;Flip to back;divisor;settings;Delete chart;px;=CHARTS(;[CHARTS];,;canvas;"get((.*?))";gi;$1;=;data.labels;i;material-icons;minimize;jss_chart_error;data-error;Something went wrong;absolute;0px;40px;addchart;onbeforepaste;=CHARTS;ondeleterow;ondeletecolumn;onbeforechangereferences;onchangeproperty;object;undefined'.split(";");
+(function(p,g){typeof exports===_$_cdb1[148]&&typeof module!==_$_cdb1[149]?module.exports=g():typeof define===_$_cdb1[104]&&define.amd?define(g):p.charts=g()})(this,function(){var p=null,g=jSuites.translate,A=function(){var a=_$_cdb1[0];8==this.status?this.scope&&-1!=this.scope.indexOf(_$_cdb1[1])||(a=_$_cdb1[2]):a=_$_cdb1[3];return a},v=function(a){var f=a.innerText.match(/get\(.*?\)/gi);return f&&f.length?f[0].substring(4,f[0].length-1):a.innerText},B=function(){var a=[];typeof this.value===_$_cdb1[10]&&
+(this.value=[this.value]);for(var f=0;12>f;f++)a[f]={value:this.value[f]||_$_cdb1[0]};this.data=a;return lemonade.element('<div class="jss_chart_palette">\n                <Color @loop="self.data" />\n            </div>',this,{Color:function(){var h=this;h.create=function(d){jSuites.color(d,{value:h.value,onchange:function(b,e){b=h.parent.data.indexOf(h);h.parent.value[b]=e;h.parent.onchange(_$_cdb1[11],h.parent.value);h.value=e}})};return lemonade.element('<div style="{{\'background-color:\'+self.value}}" @ready="self.create(this)"></div>',
+h)}})},C=function(){var a=this,f=null;a.instance=null;var h=`
             <div @ready="self.createModal(this)">
                 <div class='row p2'>
                    <div class='column f1'>
                       <div class='form-group'>
-                         <label>${h(_$_5b0f[39])}</label>
+                         <label>${g(_$_cdb1[12])}</label>
                          <div @ready="self.createPicker(this)" @bind="self.data"></div>
                       </div>
                     </div>
@@ -34,7 +34,7 @@ g[_$_5b0f[33]][_$_5b0f[30]][b]=e;g[_$_5b0f[33]][_$_5b0f[35]](_$_5b0f[34],g[_$_5b
                     <div class='column f1'>
                       <div class='form-group'>
                           <label class="jswitch" style="margin-bottom: 6px;">
-                              <input @bind="self.haveLabels" type="checkbox"><i></i><span class='f1 ml1'>${h(_$_5b0f[40])}</span>
+                              <input @bind="self.haveLabels" type="checkbox"><i></i><span class='f1 ml1'>${g(_$_cdb1[13])}</span>
                           </label>
                       </div>
                     </div>
@@ -42,10 +42,10 @@ g[_$_5b0f[33]][_$_5b0f[30]][b]=e;g[_$_5b0f[33]][_$_5b0f[35]](_$_5b0f[34],g[_$_5b
                 <div class='row p2'>
                     <div class='column f1'>
                         <div class='form-group'>
-                            <label>${h(_$_5b0f[41])}</label>
+                            <label>${g(_$_cdb1[14])}</label>
                             <select @ready="self.createDropdown(this)">
-                                <option value="1">${h(_$_5b0f[42])}</option>
-                                <option value="2">${h(_$_5b0f[43])}</option>
+                                <option value="1">${g(_$_cdb1[15])}</option>
+                                <option value="2">${g(_$_cdb1[16])}</option>
                             </select>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ g[_$_5b0f[33]][_$_5b0f[30]][b]=e;g[_$_5b0f[33]][_$_5b0f[35]](_$_5b0f[34],g[_$_5b
                 <div class='row p2'>
                    <div class='column f1'>
                       <div class='form-group'>
-                         <label>${h(_$_5b0f[44])}</label>
+                         <label>${g(_$_cdb1[17])}</label>
                          <div @ready="self.createWhere(this)" data-single="true" @bind="self.cellName"></div>
                       </div>
                    </div>
@@ -62,19 +62,18 @@ g[_$_5b0f[33]][_$_5b0f[30]][b]=e;g[_$_5b0f[33]][_$_5b0f[35]](_$_5b0f[34],g[_$_5b
                     <div class='column f1'>
                         <div class='form-group'>
                             <br>
-                            <button type="button" class="jbutton dark w100" onclick="self.insert()" style="margin-bottom: 10px">${h(_$_5b0f[45])}</button>
-                            <button type="button" class="jbutton dark w100" onclick="self.cancel()">${h(_$_5b0f[46])}</button>
+                            <button type="button" class="jbutton dark w100" onclick="self.insert()" style="margin-bottom: 10px">${g(_$_cdb1[18])}</button>
+                            <button type="button" class="jbutton dark w100" onclick="self.cancel()">${g(_$_cdb1[19])}</button>
                         </div>
                     </div>
                 </div>
-           </div>`;a[_$_5b0f[47]]=function(d){f=jSuites[_$_5b0f[48]](d)};a[_$_5b0f[49]]=function(d){a[_$_5b0f[50]]=jSuites[_$_5b0f[50]](d,{title:h(_$_5b0f[51]),closed:!0,width:_$_5b0f[52],height:_$_5b0f[53],backdrop:!1})};a[_$_5b0f[54]]=function(d){p[_$_5b0f[57]](d,function(){a[_$_5b0f[26]]=d[_$_5b0f[9]];jSuites[_$_5b0f[56]](d[_$_5b0f[55]])})};a[_$_5b0f[58]]=function(d){p[_$_5b0f[57]](d,function(){a[_$_5b0f[59]]=d[_$_5b0f[9]];jSuites[_$_5b0f[56]](d[_$_5b0f[55]])})};a[_$_5b0f[60]]=function(){a[_$_5b0f[50]][_$_5b0f[61]]()};
-a[_$_5b0f[62]]=function(){var d,b=a[_$_5b0f[26]],e=_$_5b0f[1];-1!=b[_$_5b0f[5]](_$_5b0f[63])&&(b=b[_$_5b0f[64]](_$_5b0f[63]),e=b[0][_$_5b0f[65]]()+_$_5b0f[63],b=b[1]);-1==b[_$_5b0f[5]](_$_5b0f[66])&&(b=b+_$_5b0f[66]+b);b=p[_$_5b0f[28]][_$_5b0f[68]](p[_$_5b0f[28]][_$_5b0f[67]](b));b=b[_$_5b0f[64]](_$_5b0f[66]);var k=p[_$_5b0f[28]][_$_5b0f[27]](b[0]),c=p[_$_5b0f[28]][_$_5b0f[27]](b[1]);b=[];if(f[_$_5b0f[69]]()==_$_5b0f[70])for(var l=k[0];l<=c[0];l++)b[_$_5b0f[24]](_$_5b0f[71]+e+p[_$_5b0f[28]][_$_5b0f[72]](l,
-k[1])+_$_5b0f[66]+p[_$_5b0f[28]][_$_5b0f[72]](l,c[1])+_$_5b0f[73]);else for(l=k[1];l<=c[1];l++)b[_$_5b0f[24]](_$_5b0f[71]+e+p[_$_5b0f[28]][_$_5b0f[72]](k[0],l)+_$_5b0f[66]+p[_$_5b0f[28]][_$_5b0f[72]](c[0],l)+_$_5b0f[73]);a[_$_5b0f[74]]&&(d=b[_$_5b0f[75]]());e=a[_$_5b0f[38]];if(k=a[_$_5b0f[59]])if(c=e[_$_5b0f[13]](k),c[_$_5b0f[16]][_$_5b0f[15]](_$_5b0f[14]))alert(h(_$_5b0f[17])+k),b=!1;else{d={type:_$_5b0f[18],top:c[_$_5b0f[19]],left:c[_$_5b0f[20]],chart:{type:_$_5b0f[21],data:{labels:d,datasets:[]},
-options:{plugins:{legend:{position:_$_5b0f[22]}}}}};for(c=0;c<b[_$_5b0f[10]];c++)l=jSuites[_$_5b0f[23]](_$_5b0f[18])[0][c%jSuites[_$_5b0f[23]](_$_5b0f[18])[0][_$_5b0f[10]]],d[_$_5b0f[18]][_$_5b0f[26]][_$_5b0f[25]][_$_5b0f[24]]({data:b[c],borderColor:l,backgroundColor:l});b=p[_$_5b0f[28]][_$_5b0f[27]](k);e[_$_5b0f[29]](b[0],b[1],d);b=!0}else alert(h(_$_5b0f[12])),b=!1;if(b)a[_$_5b0f[50]][_$_5b0f[61]]()};return lemonade[_$_5b0f[37]](g,a)},D=function(){var a=this;a[_$_5b0f[76]]=_$_5b0f[77];a[_$_5b0f[32]]=
-function(g){g[_$_5b0f[77]]=a};a[_$_5b0f[78]]=function(g,d){a[_$_5b0f[33]][g]=d;a[_$_5b0f[33]][_$_5b0f[35]](g,[])};a[_$_5b0f[79]]=function(){if(a[_$_5b0f[81]][_$_5b0f[16]][_$_5b0f[15]](_$_5b0f[80]))a[_$_5b0f[61]]();else a[_$_5b0f[82]]()};a[_$_5b0f[82]]=function(){jSuites[_$_5b0f[83]](a,!0);a[_$_5b0f[81]][_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[80])};a[_$_5b0f[61]]=function(){jSuites[_$_5b0f[83]](a,!1);a[_$_5b0f[81]][_$_5b0f[16]][_$_5b0f[85]](_$_5b0f[80])};a[_$_5b0f[86]]=function(g){jSuites[_$_5b0f[36]](g,
-{value:a[_$_5b0f[33]][_$_5b0f[87]],onchange:function(d,b){a[_$_5b0f[78]](d[_$_5b0f[88]],b)},closeOnChange:!0})};a[_$_5b0f[89]]=function(g){jSuites[_$_5b0f[48]](g,{width:_$_5b0f[90],data:[{text:h(_$_5b0f[91]),value:_$_5b0f[92]},{text:h(_$_5b0f[93]),value:_$_5b0f[94]},{text:h(_$_5b0f[95]),value:_$_5b0f[96]},{text:h(_$_5b0f[97]),value:_$_5b0f[98]}],onchange:function(d,b,e,k){a[_$_5b0f[78]](d[_$_5b0f[100]](_$_5b0f[99]),k)}})};a[_$_5b0f[101]]=function(g){var d=Object[_$_5b0f[104]](jSuites[_$_5b0f[103]])[_$_5b0f[102]](function(e){return{text:h(e),
-value:e}}),b=jSuites[_$_5b0f[48]](g,{data:d,onchange:function(e,k,c,l){if(l===_$_5b0f[1])b[_$_5b0f[105]](c)}})};a[_$_5b0f[34]]=a[_$_5b0f[33]][_$_5b0f[34]];var f=`<div @ready="self.create(this)">
-                <button type="button" title="${h(_$_5b0f[106])}" onclick="self.toggle(this)">
+           </div>`;a.createDropdown=function(d){f=jSuites.dropdown(d)};a.createModal=function(d){a.modal=jSuites.modal(d,{title:g(_$_cdb1[20]),closed:!0,width:_$_cdb1[21],height:_$_cdb1[22],backdrop:!1})};a.createPicker=function(d){p.picker(d,function(){a.data=d.innerText;jSuites.focus(d.lastChild)})};a.createWhere=function(d){p.picker(d,function(){a.cellName=d.innerText;jSuites.focus(d.lastChild)})};a.cancel=function(){a.modal.close()};a.insert=function(){var d,b=a.data,e=_$_cdb1[0];-1!=b.indexOf(_$_cdb1[23])&&
+(b=b.split(_$_cdb1[23]),e=b[0].toUpperCase()+_$_cdb1[23],b=b[1]);-1==b.indexOf(_$_cdb1[24])&&(b=b+_$_cdb1[24]+b);b=p.helpers.getRangeFromTokens(p.helpers.getTokensFromRange(b));b=b.split(_$_cdb1[24]);var k=p.helpers.getCoordsFromColumnName(b[0]),c=p.helpers.getCoordsFromColumnName(b[1]);b=[];if(f.getValue()==_$_cdb1[25])for(var l=k[0];l<=c[0];l++)b.push(_$_cdb1[26]+e+p.helpers.getColumnNameFromCoords(l,k[1])+_$_cdb1[24]+p.helpers.getColumnNameFromCoords(l,c[1])+_$_cdb1[27]);else for(l=k[1];l<=c[1];l++)b.push(_$_cdb1[26]+
+e+p.helpers.getColumnNameFromCoords(k[0],l)+_$_cdb1[24]+p.helpers.getColumnNameFromCoords(c[0],l)+_$_cdb1[27]);a.haveLabels&&(d=b.shift());e=a.instance;if(k=a.cellName)if(c=e.getCell(k),c.classList.contains(_$_cdb1[5]))alert(g(_$_cdb1[6])+k),b=!1;else{d={type:_$_cdb1[7],top:c.offsetTop,left:c.offsetLeft,chart:{type:_$_cdb1[8],data:{labels:d,datasets:[]},options:{plugins:{legend:{position:_$_cdb1[9]}}}}};for(c=0;c<b.length;c++)l=jSuites.palette(_$_cdb1[7])[0][c%jSuites.palette(_$_cdb1[7])[0].length],
+d.chart.data.datasets.push({data:b[c],borderColor:l,backgroundColor:l});b=p.helpers.getCoordsFromColumnName(k);e.setProperty(b[0],b[1],d);b=!0}else alert(g(_$_cdb1[4])),b=!1;b&&a.modal.close()};return lemonade.element(h,a)},D=function(){var a=this;a.type=_$_cdb1[28];a.create=function(h){h.floating=a};a[_$_cdb1[29]]=function(h,d){a.parent[h]=d;a.parent.onchange(h,[])};a.toggle=function(){a.panel.classList.contains(_$_cdb1[30])?a.close():a.open()};a.open=function(){jSuites.tracking(a,!0);a.panel.classList.add(_$_cdb1[30])};
+a.close=function(){jSuites.tracking(a,!1);a.panel.classList.remove(_$_cdb1[30])};a.createColorPicker=function(h){jSuites.color(h,{value:a.parent.borderColor,onchange:function(d,b){a[_$_cdb1[29]](d.name,b)},closeOnChange:!0})};a.inputPointStyle=function(h){jSuites.dropdown(h,{width:_$_cdb1[31],data:[{text:g(_$_cdb1[32]),value:_$_cdb1[33]},{text:g(_$_cdb1[34]),value:_$_cdb1[35]},{text:g(_$_cdb1[36]),value:_$_cdb1[37]},{text:g(_$_cdb1[38]),value:_$_cdb1[39]}],onchange:function(d,b,e,k){a[_$_cdb1[29]](d.getAttribute(_$_cdb1[40]),
+k)}})};a.inputPalette=function(h){var d=Object.keys(jSuites.paletteList).map(function(e){return{text:g(e),value:e}}),b=jSuites.dropdown(h,{data:d,onchange:function(e,k,c,l){l===_$_cdb1[0]&&b.setValue(c)}})};a.backgroundColor=a.parent.backgroundColor;var f=`<div @ready="self.create(this)">
+                <button type="button" title="${g(_$_cdb1[41])}" onclick="self.toggle(this)">
                     <i class="material-icons small">settings</i>
                 </button><div>
                     <div class="jss_chart_floating" @ref="self.panel">
@@ -82,7 +81,7 @@ value:e}}),b=jSuites[_$_5b0f[48]](g,{data:d,onchange:function(e,k,c,l){if(l===_$
                         <div class='row line bar radar'>
                             <div class="column f1">
                                 <div class="form-group">
-                                <label>${h(_$_5b0f[107])}</label>
+                                <label>${g(_$_cdb1[42])}</label>
                                 <Palette name="backgroundColor" value="{{self.backgroundColor}}" onchange="{{self.set}}" />
                                 </div>
                             </div>
@@ -90,7 +89,7 @@ value:e}}),b=jSuites[_$_5b0f[48]](g,{data:d,onchange:function(e,k,c,l){if(l===_$
                         <div class='row line pie doughnut radar'>
                             <div class="column f1">
                                 <div class="form-group">
-                                 <label>${h(_$_5b0f[108])}</label>
+                                 <label>${g(_$_cdb1[43])}</label>
                                  <input @ready="self.createColorPicker(this)" name="borderColor" />
                                 </div>
                             </div>
@@ -98,7 +97,7 @@ value:e}}),b=jSuites[_$_5b0f[48]](g,{data:d,onchange:function(e,k,c,l){if(l===_$
                         <div class='row line radar'>
                             <div class='column f1'>
                                 <div class='form-group'>
-                                    <label>${h(_$_5b0f[109])}</label>
+                                    <label>${g(_$_cdb1[44])}</label>
                                     <div @ready="self.inputPointStyle(this)" data-name="pointStyle"></div>
                                 </div>
                             </div>
@@ -107,34 +106,33 @@ value:e}}),b=jSuites[_$_5b0f[48]](g,{data:d,onchange:function(e,k,c,l){if(l===_$
                             <div class='column f1'>
                                 <div class='form-group'>
                                     <label class="jswitch" style="margin-bottom: 6px;">
-                                        <input type="checkbox" name="fill" oninput="self.set(this.name, this.value)"><i></i><span class='f1 ml1'>${h(_$_5b0f[110])}</span>
+                                        <input type="checkbox" name="fill" oninput="self.set(this.name, this.value)"><i></i><span class='f1 ml1'>${g(_$_cdb1[45])}</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>`;return lemonade[_$_5b0f[37]](f,a,{Palette:B})},E=function(){this[_$_5b0f[35]]=this[_$_5b0f[33]][_$_5b0f[35]];var a=`<div class="jss_chart_series">
-                <div @ready="self.parent.createData(this, self)"  @bind="self.data" title="${h(_$_5b0f[111])}" data-placeholder="${h(_$_5b0f[112])}" contenteditable="true" style="width: 190px;"></div>
-                <div @ready="self.parent.createLabel(this, self)" @bind="self.label" title="${h(_$_5b0f[113])}" data-placeholder="${h(_$_5b0f[114])}" data-single="true" contenteditable="true" style="width: 150px;"></div>
+            </div>`;return lemonade.element(f,a,{Palette:B})},E=function(){this.onchange=this.parent.onchange;var a=`<div class="jss_chart_series">
+                <div @ready="self.parent.createData(this, self)"  @bind="self.data" title="${g(_$_cdb1[46])}" data-placeholder="${g(_$_cdb1[47])}" contenteditable="true" style="width: 190px;"></div>
+                <div @ready="self.parent.createLabel(this, self)" @bind="self.label" title="${g(_$_cdb1[48])}" data-placeholder="${g(_$_cdb1[49])}" data-single="true" contenteditable="true" style="width: 150px;"></div>
                 <Config />
-                <button type="button" onclick="self.parent.add()" title="${h(_$_5b0f[115])}"><i class="material-icons small">add</i></button>
-                <button type="button" onclick="self.parent.delete(self)" title="${h(_$_5b0f[116])}"><i class="material-icons small">delete</i></button>
-            </div>`;return lemonade[_$_5b0f[37]](a,this,{Config:D})},F=function(){var a=this;a[_$_5b0f[117]]=function(f,g){p[_$_5b0f[57]](f,function(){f[_$_5b0f[9]]?(g[_$_5b0f[26]]=_$_5b0f[71]+v(f)+_$_5b0f[73],jSuites[_$_5b0f[56]](f)):g[_$_5b0f[26]]=_$_5b0f[1]})};a[_$_5b0f[118]]=function(f,g){p[_$_5b0f[57]](f,function(){f[_$_5b0f[9]]?(g[_$_5b0f[119]]=_$_5b0f[71]+v(f)+_$_5b0f[73],jSuites[_$_5b0f[56]](f)):g[_$_5b0f[119]]=_$_5b0f[1]})};a[_$_5b0f[84]]=function(){if(-1<[_$_5b0f[120],_$_5b0f[121]][_$_5b0f[5]](a[_$_5b0f[33]][_$_5b0f[76]])){var f=
-jSuites[_$_5b0f[23]][_$_5b0f[122]](_$_5b0f[18])[0];var g=_$_5b0f[123]}else f=jSuites[_$_5b0f[23]][_$_5b0f[122]](_$_5b0f[18])[0][a[_$_5b0f[26]][_$_5b0f[10]]],g=jSuites[_$_5b0f[23]][_$_5b0f[122]](_$_5b0f[18])[0][a[_$_5b0f[26]][_$_5b0f[10]]];a[_$_5b0f[26]][_$_5b0f[24]]({backgroundColor:f,borderColor:g});a[_$_5b0f[124]](_$_5b0f[26])};a[_$_5b0f[125]]=function(f){a[_$_5b0f[26]][_$_5b0f[126]](a[_$_5b0f[26]][_$_5b0f[5]](f),1);if(0===a[_$_5b0f[26]][_$_5b0f[10]])a[_$_5b0f[84]]();else a[_$_5b0f[124]](_$_5b0f[26])};
-return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})},G=function(){var a=this,f=null;a[_$_5b0f[127]]=[];var g=`
+                <button type="button" onclick="self.parent.add()" title="${g(_$_cdb1[50])}"><i class="material-icons small">add</i></button>
+                <button type="button" onclick="self.parent.delete(self)" title="${g(_$_cdb1[51])}"><i class="material-icons small">delete</i></button>
+            </div>`;return lemonade.element(a,this,{Config:D})},F=function(){var a=this;a.createData=function(f,h){p.picker(f,function(){f.innerText?(h.data=_$_cdb1[26]+v(f)+_$_cdb1[27],jSuites.focus(f)):h.data=_$_cdb1[0]})};a.createLabel=function(f,h){p.picker(f,function(){f.innerText?(h.label=_$_cdb1[26]+v(f)+_$_cdb1[27],jSuites.focus(f)):h.label=_$_cdb1[0]})};a.add=function(){if(-1<[_$_cdb1[52],_$_cdb1[53]].indexOf(a.parent.type)){var f=jSuites.palette[_$_cdb1[54]](_$_cdb1[7])[0];var h=_$_cdb1[55]}else f=
+jSuites.palette[_$_cdb1[54]](_$_cdb1[7])[0][a.data.length],h=jSuites.palette[_$_cdb1[54]](_$_cdb1[7])[0][a.data.length];a.data.push({backgroundColor:f,borderColor:h});a.refresh(_$_cdb1[56])};a[_$_cdb1[57]]=function(f){a.data.splice(a.data.indexOf(f),1);0===a.data.length?a.add():a.refresh(_$_cdb1[56])};return lemonade.element('<div><Item @loop="self.data" /></div>',a,{Item:E})},G=function(){var a=this,f=null;a.series=[];var h=`
            <div @ready="self.createModal(this)">
               <div role='tabs' @ref="self.tabsElement" @ready="self.createTabs(this)">
                  <div role='headers'>
-                    <div style="width: 120px;">${h(_$_5b0f[128])}</div>
-                    <div style="width: 120px;">${h(_$_5b0f[129])}</div>
+                    <div style="width: 120px;">${g(_$_cdb1[58])}</div>
+                    <div style="width: 120px;">${g(_$_cdb1[59])}</div>
                  </div>
                  <div role='content'>
                     <div @ref="self.root" style='margin-top:10px;'>
                        <div class='row all'>
                           <div class='column f1'>
                              <div class='form-group'>
-                                <label>${h(_$_5b0f[130])}</label>
+                                <label>${g(_$_cdb1[60])}</label>
                                 <div @ready="self.inputType(this)" @bind="self.type" data-path="type" data-value="line"></div>
                              </div>
                           </div>
@@ -142,7 +140,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row line bar'>
                           <div class='column f1'>
                              <div class='form-group'>
-                                <label>${h(_$_5b0f[131])}</label>
+                                <label>${g(_$_cdb1[61])}</label>
                                 <div @ready="self.inputIndexAxis(this)" @bind="self.orientation" data-path="options.indexAxis" data-value="x"></div>
                              </div>
                           </div>
@@ -150,7 +148,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row all'>
                           <div class='column f1'>
                              <div class='form-group'>
-                                <label>${h(_$_5b0f[132])}</label>
+                                <label>${g(_$_cdb1[62])}</label>
                                 <div @ready="self.createLabels(this, self)" @bind="self.labels" data-path="data.labels"></div>
                              </div>
                           </div>
@@ -158,7 +156,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row all'>
                           <div class='column f1'>
                              <div class='form-group'>
-                                <label>${h(_$_5b0f[133])}</label>
+                                <label>${g(_$_cdb1[63])}</label>
                                 <div><Series data="{{self.series}}" onchange="{{self.onchange}}" /></div>
                              </div>
                           </div>
@@ -168,7 +166,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row all'>
                           <div class='column f1'>
                              <div class='form-group'>
-                                <label>${h(_$_5b0f[134])}</label>
+                                <label>${g(_$_cdb1[64])}</label>
                                 <input type="text" @bind="self.title" data-path="options.plugins.title.text" class="jss_object" />
                              </div>
                           </div><div class='column' style='display:none'>
@@ -183,7 +181,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row all'>
                           <div class='column f1'>
                              <div class='form-group'>
-                                <label>${h(_$_5b0f[135])}</label>
+                                <label>${g(_$_cdb1[65])}</label>
                                 <div @ready="self.inputLegend(this)" @bind="self.legend" data-path="options.plugins.legend.position" data-value="top"></div>
                              </div>
                           </div>
@@ -192,7 +190,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                             <div class='column f1'>
                                 <div class='form-group'>
                                     <label class="jswitch">
-                                    <span class='f1'>${h(_$_5b0f[136])}</span> <input @bind="self.xAxis" data-path="options.scales.x.display" data-value="true" type="checkbox" name="xAxis"><i></i>
+                                    <span class='f1'>${g(_$_cdb1[66])}</span> <input @bind="self.xAxis" data-path="options.scales.x.display" data-value="true" type="checkbox" name="xAxis"><i></i>
                                     </label>
                                 </div>
                             </div>
@@ -200,7 +198,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row all' style="{{!self.xAxis?'display:none':''}}">
                           <div class='column f1'>
                              <div class='form-group'>
-                                <input type="text" placeholder='${h(_$_5b0f[137])}' name='title' @bind="self.titleX" data-path="options.scales.x.title.text" class="jss_object"/>
+                                <input type="text" placeholder='${g(_$_cdb1[67])}' name='title' @bind="self.titleX" data-path="options.scales.x.title.text" class="jss_object"/>
                              </div>
                           </div><div class='column' style='display:none'>
                               <div class='form-group'>
@@ -215,7 +213,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                             <div class='column f1'>
                                 <div class='form-group'>
                                     <label class="jswitch">
-                                    <span class='f1'>${h(_$_5b0f[138])}</span> <input @bind="self.yAxis" data-path="options.scales.y.display" data-value="true" type="checkbox" name="yAxis"><i></i>
+                                    <span class='f1'>${g(_$_cdb1[68])}</span> <input @bind="self.yAxis" data-path="options.scales.y.display" data-value="true" type="checkbox" name="yAxis"><i></i>
                                     </label>
                                 </div>
                             </div>
@@ -223,7 +221,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                        <div class='row all'  style="{{!self.yAxis?'display:none':''}}">
                           <div class='column f1'>
                              <div class='form-group'>
-                                <input type="text" placeholder='${h(_$_5b0f[139])}' name='title' @bind="self.titleY" data-path="options.scales.y.title.text" class="jss_object"/>
+                                <input type="text" placeholder='${g(_$_cdb1[69])}' name='title' @bind="self.titleY" data-path="options.scales.y.title.text" class="jss_object"/>
                              </div>
                           </div><div class='column' style='display:none'>
                               <div class='form-group'>
@@ -238,7 +236,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                             <div class='column f1'>
                                 <div class='form-group'>
                                     <label class="jswitch">
-                                    <span class='f1'>${h(_$_5b0f[140])}</span> <input @bind="self.yAxisBeginAtZero" data-path="options.scales.y.beginAtZero" data-value="false" type="checkbox" name="yAxisBeginAtoZero"><i></i>
+                                    <span class='f1'>${g(_$_cdb1[70])}</span> <input @bind="self.yAxisBeginAtZero" data-path="options.scales.y.beginAtZero" data-value="false" type="checkbox" name="yAxisBeginAtoZero"><i></i>
                                     </label>
                                 </div>
                             </div>
@@ -247,7 +245,7 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                             <div class='column f1'>
                                 <div class='form-group'>
                                     <label class="jswitch">
-                                    <span class='f1'>${h(_$_5b0f[141])}</span> <input @bind="self.beginAtZero" data-path="options.scales.r.beginAtZero" data-value="false" type="checkbox" name="beginAtoZero"><i></i>
+                                    <span class='f1'>${g(_$_cdb1[71])}</span> <input @bind="self.beginAtZero" data-path="options.scales.r.beginAtZero" data-value="false" type="checkbox" name="beginAtoZero"><i></i>
                                     </label>
                                 </div>
                             </div>
@@ -259,34 +257,29 @@ return lemonade[_$_5b0f[37]]('<div><Item @loop="self.data" /></div>',a,{Item:E})
                  <div class='column f1'>
                      <div class='form-group center'>
                          <br/>
-                         <button type="button" class="jbutton dark w100" onclick="self.close(true)">${h(_$_5b0f[142])}</button>
-                         <button type="button" class="jbutton dark w100" onclick="self.close(false)" style="margin-top: 4px">${h(_$_5b0f[46])}</button>
+                         <button type="button" class="jbutton dark w100" onclick="self.close(true)">${g(_$_cdb1[72])}</button>
+                         <button type="button" class="jbutton dark w100" onclick="self.close(false)" style="margin-top: 4px">${g(_$_cdb1[19])}</button>
                      </div>
                  </div>
               </div>
            </div>
-       `;a[_$_5b0f[49]]=function(d){a[_$_5b0f[50]]=jSuites[_$_5b0f[50]](d,{title:h(_$_5b0f[143]),closed:!0,width:_$_5b0f[144],height:_$_5b0f[145],backdrop:!1,onclose:function(){a[_$_5b0f[61]](!1)}})};a[_$_5b0f[146]]=function(d,b){p[_$_5b0f[57]](d,function(){d[_$_5b0f[9]]?(b[_$_5b0f[147]]=_$_5b0f[71]+v(d)+_$_5b0f[73],jSuites[_$_5b0f[56]](d)):b[_$_5b0f[147]]=_$_5b0f[1]})};a[_$_5b0f[148]]=function(d){jSuites[_$_5b0f[150]](d,{palette:_$_5b0f[149],animation:!0})};a[_$_5b0f[151]]=function(d){jSuites[_$_5b0f[48]](d,
-{data:[{text:h(_$_5b0f[152]),value:_$_5b0f[21]},{text:h(_$_5b0f[153]),value:_$_5b0f[154]},{text:h(_$_5b0f[155]),value:_$_5b0f[120]},{text:h(_$_5b0f[156]),value:_$_5b0f[121]},{text:h(_$_5b0f[157]),value:_$_5b0f[158]}],onchange:function(b,e,k,c){for(b=0;b<a[_$_5b0f[160]][_$_5b0f[159]][_$_5b0f[10]];b++)a[_$_5b0f[160]][_$_5b0f[159]][b][_$_5b0f[16]][_$_5b0f[15]](_$_5b0f[161])||a[_$_5b0f[160]][_$_5b0f[159]][b][_$_5b0f[16]][_$_5b0f[15]](c)?a[_$_5b0f[160]][_$_5b0f[159]][b][_$_5b0f[163]][_$_5b0f[162]]=_$_5b0f[1]:
-a[_$_5b0f[160]][_$_5b0f[159]][b][_$_5b0f[163]][_$_5b0f[162]]=_$_5b0f[22];for(b=0;b<a[_$_5b0f[164]][_$_5b0f[159]][_$_5b0f[10]];b++)a[_$_5b0f[164]][_$_5b0f[159]][b][_$_5b0f[16]][_$_5b0f[15]](_$_5b0f[161])||a[_$_5b0f[164]][_$_5b0f[159]][b][_$_5b0f[16]][_$_5b0f[15]](c)?a[_$_5b0f[164]][_$_5b0f[159]][b][_$_5b0f[163]][_$_5b0f[162]]=_$_5b0f[1]:a[_$_5b0f[164]][_$_5b0f[159]][b][_$_5b0f[163]][_$_5b0f[162]]=_$_5b0f[22]}})};a[_$_5b0f[165]]=function(d){jSuites[_$_5b0f[48]](d,{data:[{text:h(_$_5b0f[166]),value:_$_5b0f[167]},
-{text:h(_$_5b0f[168]),value:_$_5b0f[169]}]})};a[_$_5b0f[170]]=function(d){jSuites[_$_5b0f[48]](d,{data:[{text:h(_$_5b0f[171]),value:_$_5b0f[172]},{text:h(_$_5b0f[173]),value:_$_5b0f[174]},{text:h(_$_5b0f[175]),value:_$_5b0f[176]},{text:h(_$_5b0f[177]),value:_$_5b0f[178]},{text:h(_$_5b0f[179]),value:_$_5b0f[22]}]})};a[_$_5b0f[82]]=function(d,b){d[_$_5b0f[180]]();if(a[_$_5b0f[50]][_$_5b0f[181]]())a[_$_5b0f[61]](!1);a[_$_5b0f[38]]=this;a[_$_5b0f[182]]=d;a[_$_5b0f[183]]=null;this[_$_5b0f[184]]();d=JSON[_$_5b0f[186]](JSON[_$_5b0f[185]](b[_$_5b0f[18]]));
-b=a[_$_5b0f[189]][_$_5b0f[188]](_$_5b0f[187]);for(var e=0;e<b[_$_5b0f[10]];e++){var k=b[e];if(val=k[_$_5b0f[100]](_$_5b0f[190])){var c=jSuites[_$_5b0f[192]][_$_5b0f[191]](d,val);c||(c=k[_$_5b0f[100]](_$_5b0f[193]),k[_$_5b0f[76]]===_$_5b0f[194]&&(c=c===_$_5b0f[195]?!0:!1));k[_$_5b0f[196]]&&(a[k[_$_5b0f[196]]]=c)}}a[_$_5b0f[127]]=d[_$_5b0f[26]][_$_5b0f[25]];a[_$_5b0f[183]]=d;a[_$_5b0f[50]][_$_5b0f[82]]()};a[_$_5b0f[35]]=function(d,b){if(a[_$_5b0f[183]]){var e=d=null;if(b&&b[_$_5b0f[10]])for(var k=0;k<
-b[_$_5b0f[10]];k++)if(e=b[k][_$_5b0f[37]],d=e[_$_5b0f[76]]==_$_5b0f[194]?e[_$_5b0f[197]]:typeof e[_$_5b0f[198]]===_$_5b0f[199]?e[_$_5b0f[198]]():e[_$_5b0f[30]],e=e[_$_5b0f[100]](_$_5b0f[190]))jSuites[_$_5b0f[192]][_$_5b0f[191]](a[_$_5b0f[183]],e,d);a[_$_5b0f[183]]&&(f&&clearTimeout(f),f=setTimeout(function(){if(a[_$_5b0f[182]])a[_$_5b0f[182]][_$_5b0f[200]](a[_$_5b0f[183]]);f=null},50))}};a[_$_5b0f[61]]=function(d){if(a[_$_5b0f[182]]){if(!0===d)a[_$_5b0f[182]][_$_5b0f[201]](JSON[_$_5b0f[186]](JSON[_$_5b0f[185]](a[_$_5b0f[183]])));
-else a[_$_5b0f[182]][_$_5b0f[201]]();a[_$_5b0f[182]]=null}if(a[_$_5b0f[50]][_$_5b0f[181]]())a[_$_5b0f[50]][_$_5b0f[61]]()};return lemonade[_$_5b0f[37]](g,a,{Series:F})},H=function(){var a={};a[_$_5b0f[205]]=function(f,g,d,b){f[_$_5b0f[16]][_$_5b0f[85]](_$_5b0f[206]);b[_$_5b0f[207]][d][g][_$_5b0f[18]][_$_5b0f[85]]();b[_$_5b0f[207]][d][g][_$_5b0f[18]]=null;b[_$_5b0f[30]](g,d,_$_5b0f[1])};a[_$_5b0f[208]]=function(f,g,d,b){if(f=d[_$_5b0f[207]][g][f][_$_5b0f[18]])f[_$_5b0f[163]][_$_5b0f[172]]=parseInt(b[_$_5b0f[172]])+
-_$_5b0f[209],f[_$_5b0f[163]][_$_5b0f[174]]=parseInt(b[_$_5b0f[174]])+_$_5b0f[209],f[_$_5b0f[163]][_$_5b0f[210]]=parseInt(b[_$_5b0f[210]])+_$_5b0f[209],f[_$_5b0f[163]][_$_5b0f[211]]=parseInt(b[_$_5b0f[211]])+_$_5b0f[209]};a[_$_5b0f[212]]=function(f,g,d,b,e,k){var c=e[_$_5b0f[207]][b][d][_$_5b0f[18]];if(!c)f[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[206]),f[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[14]),c=document[_$_5b0f[214]](_$_5b0f[213]),c[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[215]),c[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[216]),
-c[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[217]),c[_$_5b0f[219]](_$_5b0f[218],900),c[_$_5b0f[163]][_$_5b0f[210]]=_$_5b0f[52],c[_$_5b0f[163]][_$_5b0f[211]]=_$_5b0f[220],c[_$_5b0f[163]][_$_5b0f[204]]=3,f[_$_5b0f[221]]=function(){c[_$_5b0f[163]][_$_5b0f[162]]=_$_5b0f[1]},c[_$_5b0f[124]]=function(l){if(!l){l=parseInt(c[_$_5b0f[163]][_$_5b0f[172]])||0;var m=parseInt(c[_$_5b0f[163]][_$_5b0f[174]])||0,n=parseInt(c[_$_5b0f[163]][_$_5b0f[210]])||400,q=parseInt(c[_$_5b0f[163]][_$_5b0f[211]])||300,r=f[_$_5b0f[100]](_$_5b0f[222]),
-u=f[_$_5b0f[100]](_$_5b0f[223]);e[_$_5b0f[208]]([{x:r,y:u,value:{top:l,left:m,width:n,height:q}}])}},c[_$_5b0f[200]]=function(l){var m=f[_$_5b0f[100]](_$_5b0f[222]),n=f[_$_5b0f[100]](_$_5b0f[223]);null==l&&(l=k[_$_5b0f[18]]);w(e,m,n,l)},c[_$_5b0f[125]]=function(){var l=f[_$_5b0f[100]](_$_5b0f[222]),m=f[_$_5b0f[100]](_$_5b0f[223]);e[_$_5b0f[29]](l,m,_$_5b0f[1])},c[_$_5b0f[224]]=function(){if(e[_$_5b0f[226]][_$_5b0f[225]])e[_$_5b0f[33]][_$_5b0f[228]][_$_5b0f[4]][_$_5b0f[227]][_$_5b0f[82]][_$_5b0f[191]](e,
-c,k)},c[_$_5b0f[229]]=function(l){if(p[_$_5b0f[230]]&&p[_$_5b0f[230]][_$_5b0f[226]][_$_5b0f[225]]){var m=[];m[_$_5b0f[24]]({icon:_$_5b0f[231],title:h(_$_5b0f[232]),onclick:function(){for(var n=c,q=n[_$_5b0f[203]][_$_5b0f[188]](_$_5b0f[202]),r=0,u,x=0;x<q[_$_5b0f[10]];x++)u=parseInt(q[x][_$_5b0f[163]][_$_5b0f[204]]),u>r&&(r=u);n[_$_5b0f[163]][_$_5b0f[204]]=r+1}});m[_$_5b0f[24]]({icon:_$_5b0f[233],title:h(_$_5b0f[234]),onclick:function(){var n=c;n[_$_5b0f[203]][_$_5b0f[188]](_$_5b0f[202]);n[_$_5b0f[163]][_$_5b0f[204]]=
-3}});m[_$_5b0f[24]]({type:_$_5b0f[235]});m[_$_5b0f[24]]({icon:_$_5b0f[227],title:h(_$_5b0f[143]),onclick:function(){c[_$_5b0f[224]]()}});m[_$_5b0f[24]]({icon:_$_5b0f[125],title:h(_$_5b0f[236]),onclick:function(){c[_$_5b0f[125]]()}});p[_$_5b0f[230]][_$_5b0f[33]][_$_5b0f[229]][_$_5b0f[229]][_$_5b0f[82]](l,m)}},c[_$_5b0f[201]]=function(l){var m=f[_$_5b0f[100]](_$_5b0f[222]),n=f[_$_5b0f[100]](_$_5b0f[223]);if(null!=l){var q=Object[_$_5b0f[237]]({},k);q[_$_5b0f[18]]=l;e[_$_5b0f[29]](m,n,q)}else c[_$_5b0f[200]]()},
-e[_$_5b0f[207]][b][d][_$_5b0f[18]]=c,e[_$_5b0f[239]][_$_5b0f[238]](c),k[_$_5b0f[172]]&&(c[_$_5b0f[163]][_$_5b0f[172]]=parseInt(k[_$_5b0f[172]])+_$_5b0f[209]),k[_$_5b0f[174]]&&(c[_$_5b0f[163]][_$_5b0f[174]]=parseInt(k[_$_5b0f[174]])+_$_5b0f[209]),k[_$_5b0f[210]]&&(c[_$_5b0f[163]][_$_5b0f[210]]=parseInt(k[_$_5b0f[210]])+_$_5b0f[209]),k[_$_5b0f[211]]&&(c[_$_5b0f[163]][_$_5b0f[211]]=parseInt(k[_$_5b0f[211]])+_$_5b0f[209]),k[_$_5b0f[204]]&&(c[_$_5b0f[163]][_$_5b0f[204]]=parseInt(k[_$_5b0f[204]]));else if(g==
-_$_5b0f[1])return c[_$_5b0f[125]](),_$_5b0f[1];g=_$_5b0f[240]+z(k)+_$_5b0f[73];e[_$_5b0f[241]](g,d,b);return g};a[_$_5b0f[242]]=function(f,g,d,b,e,k){g=_$_5b0f[240]+z(k)+_$_5b0f[73];e[_$_5b0f[241]](g,d,b);return g};a[_$_5b0f[243]]=function(f,g,d,b,e,k){return!1};a[_$_5b0f[244]]=function(f,g,d,b,e,k){return!1};a[_$_5b0f[122]]=function(f,g){return _$_5b0f[245]};return a}(),I=function(){var a=this[_$_5b0f[38]][_$_5b0f[246]](this[_$_5b0f[167]],this[_$_5b0f[169]])[_$_5b0f[18]];a&&w(this[_$_5b0f[38]],this[_$_5b0f[167]],
-this[_$_5b0f[169]],a);return _$_5b0f[1]},z=function(a){if((a=JSON[_$_5b0f[185]](a[_$_5b0f[18]])[_$_5b0f[8]](/get\(.*?\)/gi))&&a[_$_5b0f[10]]){for(var f=0;f<a[_$_5b0f[10]];f++)a[f]=a[f][_$_5b0f[11]](4,a[f][_$_5b0f[10]]-1);a[_$_5b0f[248]](_$_5b0f[247])}else a=_$_5b0f[1];return a},w=function(a,f,g,d){var b=a[_$_5b0f[207]][g][f][_$_5b0f[18]];b[_$_5b0f[9]]=_$_5b0f[1];canvas=document[_$_5b0f[214]](_$_5b0f[249]);b[_$_5b0f[238]](canvas);try{var e=JSON[_$_5b0f[185]](d);e=e[_$_5b0f[253]](new RegExp(_$_5b0f[250],
-_$_5b0f[251]),_$_5b0f[252]);e=a[_$_5b0f[241]](_$_5b0f[254]+e,null,null,null,!0);if(jSuites[_$_5b0f[192]][_$_5b0f[191]](e,_$_5b0f[255])==_$_5b0f[1]){for(g=f=0;g<e[_$_5b0f[26]][_$_5b0f[25]][_$_5b0f[10]];g++)f=Math[_$_5b0f[256]](f,e[_$_5b0f[26]][_$_5b0f[25]][g][_$_5b0f[26]][_$_5b0f[10]]);jSuites[_$_5b0f[192]][_$_5b0f[191]](e,_$_5b0f[255],Array[_$_5b0f[257]](Array(f)[_$_5b0f[104]]()))}var k=document[_$_5b0f[214]](_$_5b0f[258]);k[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[259]);k[_$_5b0f[9]]=_$_5b0f[260];k[_$_5b0f[261]]=
-function(){b[_$_5b0f[163]][_$_5b0f[162]]=_$_5b0f[22]};b[_$_5b0f[238]](k);b[_$_5b0f[16]][_$_5b0f[85]](_$_5b0f[262]);b[_$_5b0f[264]](_$_5b0f[263]);new Chart(canvas,e)}catch(c){b[_$_5b0f[9]]=_$_5b0f[1],b[_$_5b0f[16]][_$_5b0f[84]](_$_5b0f[262]),b[_$_5b0f[219]](_$_5b0f[263],jSuites[_$_5b0f[0]](_$_5b0f[265])),console[_$_5b0f[266]](c)}if(a=A[_$_5b0f[191]](a[_$_5b0f[33]]))e=document[_$_5b0f[214]](_$_5b0f[213]),e[_$_5b0f[163]][_$_5b0f[267]]=_$_5b0f[268],e[_$_5b0f[163]][_$_5b0f[178]]=_$_5b0f[269],e[_$_5b0f[163]][_$_5b0f[174]]=
-_$_5b0f[269],e[_$_5b0f[9]]=a,e[_$_5b0f[270]]=_$_5b0f[271],b[_$_5b0f[238]](e)},J=function(a,f){var g={};g[_$_5b0f[272]]=function(d){d[_$_5b0f[275]][_$_5b0f[24]]({content:_$_5b0f[273],type:_$_5b0f[258],title:h(_$_5b0f[51]),onclick:function(){var b=p[_$_5b0f[230]][_$_5b0f[274]]();b&&(b=b[_$_5b0f[64]](_$_5b0f[63])[1]);g[_$_5b0f[82]](p[_$_5b0f[230]],b,_$_5b0f[1])}});return d};g[_$_5b0f[276]]=function(d,b,e,k,c,l){var m=l=null,n=null;if(d==_$_5b0f[277]){for(m=0;m<e[_$_5b0f[10]];m++)for(l=0;l<e[m][_$_5b0f[10]];l++)(_$_5b0f[1]+
-e[m][l])[_$_5b0f[278]](0,7)==_$_5b0f[279]&&(e[m][l]=_$_5b0f[1]);return e}if(d==_$_5b0f[280]||d==_$_5b0f[281])for(m=0;m<c[_$_5b0f[10]];m++)for(l=0;l<c[m][_$_5b0f[10]];l++){if(c[m][l][_$_5b0f[37]]&&c[m][l][_$_5b0f[37]][_$_5b0f[16]][_$_5b0f[15]](_$_5b0f[206]))c[m][l][_$_5b0f[18]][_$_5b0f[85]]()}else if(d==_$_5b0f[282]){var q=c=n=null;d=[];for(m=0;m<b[_$_5b0f[207]][_$_5b0f[10]];m++)for(l=0;l<b[_$_5b0f[207]][m][_$_5b0f[10]];l++)if(void 0!==b[_$_5b0f[207]][m][l][_$_5b0f[18]]){n=b[_$_5b0f[28]][_$_5b0f[72]](l,
-m);c=Object[_$_5b0f[237]]({},b[_$_5b0f[226]][_$_5b0f[283]][n][_$_5b0f[18]]);q=!1;c[_$_5b0f[26]][_$_5b0f[147]]&&0==c[_$_5b0f[26]][_$_5b0f[147]][_$_5b0f[284]]()[_$_5b0f[5]](_$_5b0f[71])&&(t=b[_$_5b0f[285]](c[_$_5b0f[26]][_$_5b0f[147]],e,k),t!==c[_$_5b0f[26]][_$_5b0f[147]]&&(c[_$_5b0f[26]][_$_5b0f[147]]=t,q=!0));if(c[_$_5b0f[26]][_$_5b0f[25]][_$_5b0f[10]])for(n=0;n<c[_$_5b0f[26]][_$_5b0f[25]][_$_5b0f[10]];n++)c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[119]]&&0==c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[119]][_$_5b0f[284]]()[_$_5b0f[5]](_$_5b0f[71])&&
-(t=b[_$_5b0f[285]](c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[119]],e,k),t!==c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[119]]&&(c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[119]]=t,q=!0)),c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[26]]&&0==c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[26]][_$_5b0f[284]]()[_$_5b0f[5]](_$_5b0f[71])&&(t=b[_$_5b0f[285]](c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[26]],e,k),t!==c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[26]]&&(c[_$_5b0f[26]][_$_5b0f[25]][n][_$_5b0f[26]]=t,q=!0));if(1==q)d[_$_5b0f[24]]({x:l,
-y:m,value:{chart:c}})}d[_$_5b0f[10]]&&(e=b[_$_5b0f[33]][_$_5b0f[286]],b[_$_5b0f[33]][_$_5b0f[286]]=!0,b[_$_5b0f[208]](d),b[_$_5b0f[33]][_$_5b0f[286]]=e)}else if(d==_$_5b0f[287])e[_$_5b0f[288]](function(r){var u=b[_$_5b0f[246]](r[_$_5b0f[167]],r[_$_5b0f[169]])[_$_5b0f[18]];u&&w(b,r[_$_5b0f[167]],r[_$_5b0f[169]],u)})};g[_$_5b0f[289]]=function(d,b,e,k,c,l,m,n){if(null!=b&&null!=e){k={title:h(_$_5b0f[51]),icon:_$_5b0f[273],onclick:function(){var q=p[_$_5b0f[28]][_$_5b0f[72]](b,e);g[_$_5b0f[82]](d,_$_5b0f[1],
-q)}};l=0;for(let q in c)if(c[q][_$_5b0f[76]]==_$_5b0f[235]||c[q][_$_5b0f[76]]==_$_5b0f[21]){l=parseInt(q)+1;break}c[_$_5b0f[126]](l,0,{type:_$_5b0f[235]});c[_$_5b0f[126]](l,0,k)}};g[_$_5b0f[82]]=function(d,b,e){var k=d[_$_5b0f[290]](!0);g[_$_5b0f[291]][_$_5b0f[38]]=d;g[_$_5b0f[291]][_$_5b0f[26]]=b;g[_$_5b0f[291]][_$_5b0f[74]]=jSuites[_$_5b0f[292]](k[0][0])?!1:!0;g[_$_5b0f[291]][_$_5b0f[59]]=e;g[_$_5b0f[291]][_$_5b0f[50]][_$_5b0f[82]]()};f=document[_$_5b0f[214]](_$_5b0f[213]);a[_$_5b0f[294]][_$_5b0f[293]](f);
-lemonade[_$_5b0f[295]](function(){return lemonade[_$_5b0f[37]]('\n                <div>\n                    <div><Inputchart @ref="self.input" /></div>\n                    <div><Settings @ref="self.settings" /></div>\n                </div>\n            ',g,{Inputchart:C,Settings:G})},f);return g},y=function(){return!0};y[_$_5b0f[296]]=function(a,f){a[_$_5b0f[297]]({charts:J});p[_$_5b0f[298]][_$_5b0f[18]]||(p[_$_5b0f[298]][_$_5b0f[18]]=H,p[_$_5b0f[300]][_$_5b0f[299]]({CHARTS:I}))};y[_$_5b0f[301]]=
-function(a){null===p&&(p=this)};return y});
+       `;a.createModal=function(d){a.modal=jSuites.modal(d,{title:g(_$_cdb1[73]),closed:!0,width:_$_cdb1[74],height:_$_cdb1[75],backdrop:!1,onclose:function(){a.close(!1)}})};a.createLabels=function(d,b){p.picker(d,function(){d.innerText?(b.labels=_$_cdb1[26]+v(d)+_$_cdb1[27],jSuites.focus(d)):b.labels=_$_cdb1[0]})};a.createTabs=function(d){jSuites.tabs(d,{palette:_$_cdb1[76],animation:!0})};a.inputType=function(d){jSuites.dropdown(d,{data:[{text:g(_$_cdb1[77]),value:_$_cdb1[8]},{text:g(_$_cdb1[78]),
+value:_$_cdb1[79]},{text:g(_$_cdb1[80]),value:_$_cdb1[52]},{text:g(_$_cdb1[81]),value:_$_cdb1[53]},{text:g(_$_cdb1[82]),value:_$_cdb1[83]}],onchange:function(b,e,k,c){for(b=0;b<a.root.children.length;b++)a.root.children[b].classList.contains(_$_cdb1[84])||a.root.children[b].classList.contains(c)?a.root.children[b].style.display=_$_cdb1[0]:a.root.children[b].style.display=_$_cdb1[9];for(b=0;b<a.rootstyle.children.length;b++)a.rootstyle.children[b].classList.contains(_$_cdb1[84])||a.rootstyle.children[b].classList.contains(c)?
+a.rootstyle.children[b].style.display=_$_cdb1[0]:a.rootstyle.children[b].style.display=_$_cdb1[9]}})};a.inputIndexAxis=function(d){jSuites.dropdown(d,{data:[{text:g(_$_cdb1[85]),value:_$_cdb1[86]},{text:g(_$_cdb1[87]),value:_$_cdb1[88]}]})};a.inputLegend=function(d){jSuites.dropdown(d,{data:[{text:g(_$_cdb1[89]),value:_$_cdb1[90]},{text:g(_$_cdb1[91]),value:_$_cdb1[92]},{text:g(_$_cdb1[93]),value:_$_cdb1[94]},{text:g(_$_cdb1[95]),value:_$_cdb1[96]},{text:g(_$_cdb1[97]),value:_$_cdb1[9]}]})};a.open=
+function(d,b){d.blur();a.modal.isOpen()&&a.close(!1);a.instance=this;a.container=d;a.chartOptions=null;this.resetSelection();d=JSON.parse(JSON.stringify(b.chart));b=a.tabsElement.querySelectorAll(_$_cdb1[98]);for(var e=0;e<b.length;e++){var k=b[e];if(val=k.getAttribute(_$_cdb1[99])){var c=jSuites.path.call(d,val);c||(c=k.getAttribute(_$_cdb1[100]),k.type===_$_cdb1[101]&&(c=c===_$_cdb1[102]?!0:!1));k[_$_cdb1[103]]&&(a[k[_$_cdb1[103]]]=c)}}a.series=d.data.datasets;a.chartOptions=d;a.modal.open()};a.onchange=
+function(d,b){if(a.chartOptions){var e=d=null;if(b&&b.length)for(var k=0;k<b.length;k++){var c=b[k].element;d=c.type==_$_cdb1[101]?c.checked:typeof c.val===_$_cdb1[104]?c.val():c.value;(e=c.getAttribute(_$_cdb1[99]))&&jSuites.path.call(a.chartOptions,e,d)}a.chartOptions&&(f&&clearTimeout(f),f=setTimeout(function(){a.container&&a.container.update(a.chartOptions);f=null},50))}};a.close=function(d){a.container&&(!0===d?a.container.save(JSON.parse(JSON.stringify(a.chartOptions))):a.container.save(),a.container=
+null);a.modal.isOpen()&&a.modal.close()};return lemonade.element(h,a,{Series:F})},H=function(){var a={destroyCell:function(f,h,d,b){f.classList.remove(_$_cdb1[106]);b.records[d][h].chart.remove();b.records[d][h].chart=null;b.value(h,d,_$_cdb1[0])},createCell:function(f,h,d,b,e,k){var c=e.records[b][d].chart;if(!c)f.classList.add(_$_cdb1[106]),f.classList.add(_$_cdb1[5]),c=document.createElement(_$_cdb1[107]),c.classList.add(_$_cdb1[108]),c.classList.add(_$_cdb1[109]),c.classList.add(_$_cdb1[110]),
+c.setAttribute(_$_cdb1[111],900),c.style.width=_$_cdb1[21],c.style.height=_$_cdb1[112],c.style.zIndex=3,f.ondblclick=function(){c.style.display=_$_cdb1[0]},c.refresh=function(l){if(!l){l=parseInt(c.style.top)||0;var m=parseInt(c.style.left)||0,n=parseInt(c.style.width)||400,r=parseInt(c.style.height)||300,q=f.getAttribute(_$_cdb1[113]),u=f.getAttribute(_$_cdb1[114]);e.updateProperty([{x:q,y:u,value:{top:l,left:m,width:n,height:r}}],null,null,!0)}},c.update=function(l){var m=f.getAttribute(_$_cdb1[113]),
+n=f.getAttribute(_$_cdb1[114]);null==l&&(l=k.chart);w(e,m,n,l)},c[_$_cdb1[57]]=function(){var l=f.getAttribute(_$_cdb1[113]),m=f.getAttribute(_$_cdb1[114]);e.setProperty(l,m,_$_cdb1[0])},c.dblclick=function(){e.options.editable&&e.parent.plugins.charts.settings.open.call(e,c,k)},c.contextmenu=function(l){if(p.current&&p.current.options.editable){var m=[];m.push({icon:_$_cdb1[115],title:g(_$_cdb1[116]),onclick:function(){for(var n=c,r=n.parentNode.querySelectorAll(_$_cdb1[105]),q=0,u,x=0;x<r.length;x++)u=
+parseInt(r[x].style.zIndex),u>q&&(q=u);n.style.zIndex=q+1}});m.push({icon:_$_cdb1[117],title:g(_$_cdb1[118]),onclick:function(){var n=c;n.parentNode.querySelectorAll(_$_cdb1[105]);n.style.zIndex=3}});m.push({type:_$_cdb1[119]});m.push({icon:_$_cdb1[120],title:g(_$_cdb1[73]),onclick:function(){c.dblclick()}});m.push({icon:_$_cdb1[57],title:g(_$_cdb1[121]),onclick:function(){c[_$_cdb1[57]]()}});p.current.parent.contextmenu.contextmenu.open(l,m)}},c.save=function(l){var m=f.getAttribute(_$_cdb1[113]),
+n=f.getAttribute(_$_cdb1[114]);null!=l?e.updateProperty(m,n,{chart:l}):c.update()},e.records[b][d].chart=c,e.content.appendChild(c),k.top&&(c.style.top=parseInt(k.top)+_$_cdb1[122]),k.left&&(c.style.left=parseInt(k.left)+_$_cdb1[122]),k.width&&(c.style.width=parseInt(k.width)+_$_cdb1[122]),k.height&&(c.style.height=parseInt(k.height)+_$_cdb1[122]),k.zIndex&&(c.style.zIndex=parseInt(k.zIndex));else if(h==_$_cdb1[0])return c[_$_cdb1[57]](),_$_cdb1[0];h=_$_cdb1[123]+z(k)+_$_cdb1[27];e.executeFormula(h,
+d,b);return h},updateCell:function(f,h,d,b,e,k){h=_$_cdb1[123]+z(k)+_$_cdb1[27];e.executeFormula(h,d,b);return h},openEditor:function(f,h,d,b,e,k){return!1},closeEditor:function(f,h,d,b,e,k){return!1}};a[_$_cdb1[54]]=function(f,h){return _$_cdb1[124]};return a}(),I=function(){var a=this.instance.getProperty(this.x,this.y).chart;a&&w(this.instance,this.x,this.y,a);return _$_cdb1[0]},z=function(a){if((a=JSON.stringify(a.chart).match(/get\(.*?\)/gi))&&a.length){for(var f=0;f<a.length;f++)a[f]=a[f].substring(4,
+a[f].length-1);a.join(_$_cdb1[125])}else a=_$_cdb1[0];return a},w=function(a,f,h,d){var b=a.records[h][f].chart;b.innerText=_$_cdb1[0];canvas=document.createElement(_$_cdb1[126]);b.appendChild(canvas);try{var e=JSON.stringify(d);e=e.replace(new RegExp(_$_cdb1[127],_$_cdb1[128]),_$_cdb1[129]);e=a.executeFormula(_$_cdb1[130]+e,null,null,null,!0);if(jSuites.path.call(e,_$_cdb1[131])==_$_cdb1[0]){for(h=f=0;h<e.data.datasets.length;h++)f=Math.max(f,e.data.datasets[h].data.length);jSuites.path.call(e,_$_cdb1[131],
+Array.from(Array(f).keys()))}var k=document.createElement(_$_cdb1[132]);k.classList.add(_$_cdb1[133]);k.innerText=_$_cdb1[134];k.onclick=function(){b.style.display=_$_cdb1[9]};b.appendChild(k);b.classList.remove(_$_cdb1[135]);b.removeAttribute(_$_cdb1[136]);new Chart(canvas,e)}catch(c){b.innerText=_$_cdb1[0],b.classList.add(_$_cdb1[135]),b.setAttribute(_$_cdb1[136],jSuites.translate(_$_cdb1[137])),console.error(c)}if(a=A.call(a.parent))e=document.createElement(_$_cdb1[107]),e.style.position=_$_cdb1[138],
+e.style.bottom=_$_cdb1[139],e.style.left=_$_cdb1[139],e.innerText=a,e.margin=_$_cdb1[140],b.appendChild(e)},J=function(a,f){var h={toolbar:function(d){d.items.push({content:_$_cdb1[141],type:_$_cdb1[132],title:g(_$_cdb1[20]),onclick:function(){var b=p.current.getRange();b&&(b=b.split(_$_cdb1[23])[1]);h.open(p.current,b,_$_cdb1[0])}});return d},onevent:function(d,b,e,k,c,l){var m=l=null,n=null;if(d==_$_cdb1[142]){for(m=0;m<e.length;m++)for(l=0;l<e[m].length;l++)(_$_cdb1[0]+e[m][l]).substr(0,7)==_$_cdb1[143]&&
+(e[m][l]=_$_cdb1[0]);return e}if(d==_$_cdb1[144]||d==_$_cdb1[145])for(m=0;m<c.length;m++)for(l=0;l<c[m].length;l++)c[m][l].element&&c[m][l].element.classList.contains(_$_cdb1[106])&&c[m][l].chart.remove();else if(d==_$_cdb1[146]){var r=c=n=null;d=[];for(m=0;m<b.records.length;m++)for(l=0;l<b.records[m].length;l++)if(void 0!==b.records[m][l].chart){n=b.helpers.getColumnNameFromCoords(l,m);c=JSON.parse(JSON.stringify(b.options.cells[n].chart));r=!1;c.data.labels&&typeof c.data.labels===_$_cdb1[10]&&
+0==c.data.labels.toLowerCase().indexOf(_$_cdb1[26])&&(t=b.updateFormula(c.data.labels,e,k),t!==c.data.labels&&(c.data.labels=t,r=!0));if(c.data.datasets.length)for(n=0;n<c.data.datasets.length;n++)c.data.datasets[n].label&&typeof c.data.datasets[n].label===_$_cdb1[10]&&0==c.data.datasets[n].label.toLowerCase().indexOf(_$_cdb1[26])&&(t=b.updateFormula(c.data.datasets[n].label,e,k),t!==c.data.datasets[n].label&&(c.data.datasets[n].label=t,r=!0)),c.data.datasets[n].data&&0==c.data.datasets[n].data.toLowerCase().indexOf(_$_cdb1[26])&&
+(t=b.updateFormula(c.data.datasets[n].data,e,k),t!==c.data.datasets[n].data&&(c.data.datasets[n].data=t,r=!0));1==r&&d.push({x:l,y:m,value:{chart:c}})}d.length&&(e=b.parent.ignoreHistory,b.parent.ignoreHistory=!0,b.updateProperty(d),b.parent.ignoreHistory=e)}else d==_$_cdb1[147]&&e.forEach(function(q){var u=b.getProperty(q.x,q.y);if(u.type===_$_cdb1[7])if(q.value.chart)w(b,q.x,q.y,u.chart);else if(q=b.records[q.y][q.x].chart)q.style.top=parseInt(u.top)+_$_cdb1[122],q.style.left=parseInt(u.left)+_$_cdb1[122],
+q.style.width=parseInt(u.width)+_$_cdb1[122],q.style.height=parseInt(u.height)+_$_cdb1[122]})},contextMenu:function(d,b,e,k,c,l,m,n){if(null!=b&&null!=e){k={title:g(_$_cdb1[20]),icon:_$_cdb1[141],onclick:function(){var r=p.helpers.getColumnNameFromCoords(b,e);h.open(d,_$_cdb1[0],r)}};l=0;for(let r in c)if(c[r].type==_$_cdb1[119]||c[r].type==_$_cdb1[8]){l=parseInt(r)+1;break}c.splice(l,0,{type:_$_cdb1[119]});c.splice(l,0,k)}},open:function(d,b,e){var k=d.getData(!0);h.input.instance=d;h.input.data=
+b;h.input.haveLabels=jSuites.isNumeric(k[0][0])?!1:!0;h.input.cellName=e;h.input.modal.open()}};f=document.createElement(_$_cdb1[107]);a.tools.append(f);lemonade.render(function(){return lemonade.element('\n                <div>\n                    <div><Inputchart @ref="self.input" /></div>\n                    <div><Settings @ref="self.settings" /></div>\n                </div>\n            ',h,{Inputchart:C,Settings:G})},f);return h},y=function(){return!0};y.oninit=function(a,f){a.setPlugins({charts:J});
+p.editors.chart||(p.editors.chart=H,p.formula.setFormula({CHARTS:I}))};y.license=function(a){null===p&&(p=this)};return y});
